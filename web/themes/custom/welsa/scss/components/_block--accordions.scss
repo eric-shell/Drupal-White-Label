@@ -55,6 +55,11 @@
     }
   }
 
+  .field-item__field-label {
+    text-align: left;
+    line-height: 1.25;
+  }
+
   .paragraph__body {
     display: none; // Hidden for initial state of accordions
     padding: 0 24px 24px;

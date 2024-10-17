@@ -8,6 +8,7 @@
   appearance: none;
   width: 32px;
   height: 32px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +23,7 @@
     width: 24px;
     height: 24px;
     mask-image: url('../../images/icons/icon__arrow.svg');
-    mask-position: center;
+    mask-position: 2px center;
     mask-repeat: no-repeat;
     background-color: $blue-dark;
     transition: background-color ease-out .125s;
@@ -35,6 +36,10 @@
       background-color: $blue-darker;
       transition: background-color ease-out .125s;
     }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 6px rgba($gray-medium, .5), $shadow-light;
   }
 }
 
@@ -58,11 +63,13 @@
 .slick-prev {
   left: -20px;
   transform: rotate(180deg);
+  margin: 0 12px 0 0;
 }
 
 .slider__next,
 .slick-next {
   right: -20px;
+  margin: 0 0 0 12px;
 }
 
 .slick-dots {
@@ -99,6 +106,10 @@
       transition: background ease-out .125s;
     }
 
+    &:focus {
+      box-shadow: 0 0 0 6px rgba($gray-medium, .5), $shadow-light;
+    }
+
     &.slick-active {
       width: 40px;
       background: $blue-dark;
@@ -107,6 +118,10 @@
       &:hover,
       &:focus {
         background: $blue-darker;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 6px rgba($gray-medium, .5), $shadow-light;
       }
     }
   }

@@ -1,9 +1,9 @@
-uuid: 45133524-4880-47e7-ba95-012f90b17016
+uuid: 3a66d0e6-1f4e-462f-b5a9-23dc509bd5d3
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:4930c330-b9c8-4ab4-b6b1-27cd899987ba'
+    - 'block_content:basic:d91354ba-f958-4ea9-9d5f-4c0777e1de89'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: welsa
 region: announcements
 weight: 0
 provider: null
-plugin: 'block_content:4930c330-b9c8-4ab4-b6b1-27cd899987ba'
+plugin: 'block_content:d91354ba-f958-4ea9-9d5f-4c0777e1de89'
 settings:
-  id: 'block_content:4930c330-b9c8-4ab4-b6b1-27cd899987ba'
+  id: 'block_content:d91354ba-f958-4ea9-9d5f-4c0777e1de89'
   label: Announcements
   label_display: '0'
   provider: block_content

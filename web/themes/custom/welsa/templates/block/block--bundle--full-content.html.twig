@@ -42,10 +42,12 @@
   {% block content %}
     {{ content.field_full_content }}
     {% if content.field_display_functionality.0['#markup']|clean_class == 'slider' and content.field_full_content[1] %}
-      <div class="slider__controls">
-        <button type="button" aria-label="Previous slide" class="slider__prev"></button>
-        <div class="slider__dots"></div>
-        <button type="button" aria-label="Next slide" class="slider__next"></button>
+      <div class="slider__container">
+        <div class="slider__controls">
+          <button type="button" aria-label="Previous slide" class="slider__prev"></button>
+          <div class="slider__dots"></div>
+          <button type="button" aria-label="Next slide" class="slider__next"></button>
+        </div>
       </div>
     {% endif %}
   {% endblock %}

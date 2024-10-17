@@ -38,10 +38,20 @@
   }
 }
 
+.slider__container,
 .slider__controls {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: 24px;
+  background: $white;
+  padding: 0 16px;
+  border-radius: 30px;
+  box-shadow: $shadow-light;
 }
 
 .slider__prev,

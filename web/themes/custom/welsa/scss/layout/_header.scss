@@ -425,6 +425,30 @@ $submenu--width: 250px;
         min-height: 500px; // Uncomment if a fixed height is needed when child menus are taller than parent menus
         overflow: hidden;
       }
+
+      .menu-item--expanded > a {
+
+        @include breakpoint(lg) {
+          position: relative;
+        }
+
+        &:after {
+
+          @include breakpoint(lg) {
+            content: '';
+            position: absolute;
+            top: calc(50% - 8px);
+            right: 8px;
+            width: 16px;
+            height: 16px;
+            background: $blue-dark;
+            mask-image: url(../../images/icons/icon__arrow.svg);
+            mask-position: center;
+            mask-repeat: no-repeat;
+            mask-size: 16px 16px;
+          }
+        }
+      }
     }
 
     // Third menu level overrides

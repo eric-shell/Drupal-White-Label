@@ -1,0 +1,23 @@
+uuid: a27e07e8-c40f-4bd1-9f21-11b982752533
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.split_content
+  module:
+    - options
+id: paragraph.split_content.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: split_content
+label: 'Image Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

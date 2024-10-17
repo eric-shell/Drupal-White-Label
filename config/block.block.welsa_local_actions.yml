@@ -1,0 +1,20 @@
+uuid: 3e966b76-610f-42d8-92ff-6c2dcd5376af
+langcode: en
+status: true
+dependencies:
+  theme:
+    - welsa
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: welsa_local_actions
+theme: welsa
+region: admin_tools
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: en
+uuid: fe207a95-f9ba-4f0d-b356-b5e4c594db17
+name: "Eric Shell's White Label Application"
+mail: ericjshell@gmail.com
+slogan: ''
+page:
+  403: /node/1
+  404: /node/2
+  front: /node/3
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

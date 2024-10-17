@@ -1,0 +1,8 @@
+uuid: f0368360-4103-497c-afe9-668539beec9c
+langcode: en
+status: true
+dependencies: {  }
+id: secondary-menu
+label: 'Secondary Menu'
+description: 'Secondary menu items located in the site header'
+locked: false

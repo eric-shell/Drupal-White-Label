@@ -1,0 +1,16 @@
+#
+# Local development override configuration feature.
+#
+# To activate this feature, copy and rename it such that its path plus
+# filename is 'sites/default/local.services.yml'. Then, ensure that you have copied
+# 'example.local.settngs.php' to 'sites/default/local.settings.php to enable it.
+
+parameters:
+  twig.config:
+    debug: true
+    auto_reload: true
+    cache: false
+  http.response.debug_cacheability_headers: true
+services:
+   cache.backend.null:
+     class: Drupal\Core\Cache\NullBackendFactory

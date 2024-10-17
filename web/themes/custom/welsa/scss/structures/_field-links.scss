@@ -1,0 +1,39 @@
+@mixin field-links($position: center) {
+
+  .field__field-link {
+    width: 100%;
+    padding: 24px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: $position;
+    align-items: center;
+
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
+  }
+
+  .field-item__field-link {
+    width: 100%;
+
+    @include breakpoint(lg) {
+      width: auto;
+    }
+
+    & + .field-item__field-link {
+      margin: 12px 0 0;
+
+      @include breakpoint(lg) {
+        margin: 0 0 0 24px;
+      }
+    }
+
+    a {
+      width: 100%;
+
+      @include breakpoint(lg) {
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.block--basic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .container {
+    padding: 48px 24px;
+
+    @include breakpoint(lg) {
+      padding: 96px 24px;
+    }
+  }
+
+  .field-item__body {
+    position: relative;
+    z-index: 50;
+    margin: 0 auto;
+    max-width: $md-width;
+
+    @include headings {
+      padding: 0 0 24px;
+    }
+  }
+
+  @include field-links;
+}

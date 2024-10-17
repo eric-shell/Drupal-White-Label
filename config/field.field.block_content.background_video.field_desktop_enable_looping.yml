@@ -1,0 +1,23 @@
+uuid: b9abe18e-796d-4eb3-8e60-a8220adeb6a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_video
+    - field.storage.block_content.field_desktop_enable_looping
+id: block_content.background_video.field_desktop_enable_looping
+field_name: field_desktop_enable_looping
+entity_type: block_content
+bundle: background_video
+label: 'Desktop Enable Looping'
+description: 'Check to allow the desktop video to repeat playback continuously.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'on'
+  off_label: 'off'
+field_type: boolean

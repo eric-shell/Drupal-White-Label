@@ -1,0 +1,58 @@
+// Login and password page
+.user-pass,
+.user-login-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include breakpoint(lg) {
+    min-height: 30vh;
+  }
+
+  .form-item {
+    @include form-item();
+
+    & {
+      margin-bottom: 2rem;
+    }
+
+    .description {
+      color: $textColor;
+      font-size: 12px;
+      padding: 3px 0 0;
+    }
+  }
+
+  p {
+    padding: 0 0 16px;
+  }
+
+  .form-submit {
+    @include cta--primary();
+  }
+}
+
+// Member for page
+.user-logged-in.path-user {
+
+  .layout-content {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+
+    .block {
+      width: 100%;
+      max-width: $xl-width;
+      margin: 0 auto;
+      padding: 24px;
+
+      @include breakpoint(lg) {
+        padding: 24px 48px;
+      }
+    }
+  }
+}

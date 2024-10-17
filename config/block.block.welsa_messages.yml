@@ -1,0 +1,22 @@
+uuid: 803fbac1-3744-468a-8858-96688a2ec8bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - welsa
+_core:
+  default_config_hash: '-Ac3ISpIT0PQ-whzD7_dw0SdKi6dAbRFNWdSjOiVDqg'
+id: welsa_messages
+theme: welsa
+region: admin_tools
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

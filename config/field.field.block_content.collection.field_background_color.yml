@@ -1,0 +1,23 @@
+uuid: ab4e866f-9805-4c5b-b493-7e0a6a6c6054
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collection
+    - field.storage.block_content.field_background_color
+  module:
+    - options
+id: block_content.collection.field_background_color
+field_name: field_background_color
+entity_type: block_content
+bundle: collection
+label: 'Background Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

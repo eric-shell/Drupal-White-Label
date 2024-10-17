@@ -1,0 +1,34 @@
+uuid: a1dd6273-204c-4d40-8080-0910a63d1891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_body
+    - field.field.paragraph.tabs.field_label
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - text
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_label:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

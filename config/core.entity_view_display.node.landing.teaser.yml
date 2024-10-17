@@ -1,0 +1,24 @@
+uuid: caeafa3e-3a70-41a2-932f-518a540b5967
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing.field_metatags
+    - field.field.node.landing.layout_builder__layout
+    - node.type.landing
+  module:
+    - user
+id: node.landing.teaser
+targetEntityType: node
+bundle: landing
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_metatags: true
+  layout_builder__layout: true

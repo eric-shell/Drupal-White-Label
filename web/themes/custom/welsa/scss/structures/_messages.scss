@@ -1,0 +1,63 @@
+.messages-list,
+.block-system-messages-block {
+  z-index: 100;
+
+  .messages {
+    display: flex;
+    align-items: center;
+    @include font-body;
+    color: $white;
+    padding: 12px;
+    text-decoration: none;
+    background: $green;
+
+    a {
+      @include font-body;
+      color: $white;
+    }
+
+    &:before {
+      content: '';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 12px;
+      background: $white;
+      mask-image: url('../../images/messages/message__success.svg');
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+
+    &--warning {
+      background: $orange;
+
+      &:before {
+        mask-image: url('../../images/messages/message__warning.svg');
+      }
+    }
+
+    &--error {
+      @include font-body;
+      background: $red;
+      text-transform: none;
+      font-size: 14px;
+
+      &:before {
+        mask-image: url('../../images/messages/message__error.svg');
+      }
+
+      a {
+        color: $white;
+      }
+    }
+
+    .placeholder {
+      @include font-body;
+      padding: 0 .25em;
+    }
+  }
+}

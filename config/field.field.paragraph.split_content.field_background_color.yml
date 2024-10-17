@@ -1,0 +1,23 @@
+uuid: fe387f26-b117-4867-ac0c-7943ee901fb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.split_content
+  module:
+    - options
+id: paragraph.split_content.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: split_content
+label: 'Background Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

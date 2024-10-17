@@ -1,0 +1,27 @@
+uuid: 9da61213-8e71-4584-babb-8c64ed97a25e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_display_functionality
+field_name: field_display_functionality
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: stacked
+      label: Stacked
+    -
+      value: slider
+      label: Slider
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

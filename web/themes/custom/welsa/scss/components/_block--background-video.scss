@@ -1,0 +1,204 @@
+.block--background-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+  .video {
+
+    &__content {
+      width: 100%;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      @include breakpoint(lg) {
+        width: 50%;
+        padding: 48px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      z-index: 50;
+      padding: 24px;
+
+      @include breakpoint(lg) {
+        padding: 48px;
+        max-width: $md-width;
+      }
+    }
+
+    &__player {
+      display: flex;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @include breakpoint(lg) {
+        width: 50%;
+      }
+    }
+
+    &__playback {
+      position: absolute;
+      z-index: 60;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: $white;
+      border-radius: 50%;
+      box-shadow: $shadow-light;
+
+      @include breakpoint(lg) {
+        bottom: 48px;
+        right: 48px;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: $shadow-medium;
+        transition: all ease-out .125s;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 48px;
+        background: $blue-medium;
+        mask-image: url(../../images/icons/icon__play.svg);
+        mask-position: center;
+        mask-repeat: no-repeat;
+      }
+
+      &--pause:before {
+        mask-image: url(../../images/icons/icon__pause.svg);
+      }
+    }
+
+    &--mobile {
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 6 / 5;
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+      object-fit: cover;
+      aspect-ratio: 6 / 5;
+
+      @include breakpoint(lg) {
+        display: block;
+      }
+    }
+  }
+
+  .field-item__body {
+    position: relative;
+    margin: 0 auto;
+
+    @include headings {
+      padding: 0 0 24px;
+    }
+  }
+
+  @include field-links(flex-start);
+
+  // Generate all possible classes for video overlay opacity
+  @for $i from 0 through 100 {
+
+    [data-desktop-overlay="#{$i}"]:before {
+      @include breakpoint(lg) {
+        background: rgba(0,0,0, calc($i / 100));
+      }
+    }
+
+    [data-mobile-overlay="#{$i}"]:before {
+      @include mobileOnly {
+        background: rgba(0,0,0, calc($i / 100));
+      }
+    }
+  }
+
+  &.video__position--left {
+
+    @include breakpoint(lg) {
+      flex-direction: row-reverse;
+    }
+
+    .video__playback {
+
+      @include breakpoint(lg) {
+        right: auto;
+        left: 48px;
+      }
+    }
+  }
+
+  &.video__position--stacked {
+
+    .video {
+
+      &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        @include breakpoint(lg) {
+          width: 100%;
+          padding: 48px;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      &__body {
+        background: $white;
+        border-radius: 12px;
+        box-shadow: $shadow-medium;
+
+        @include breakpoint(lg) {
+          max-width: $lg-width;
+        }
+      }
+
+      &__player {
+        width: 100%;
+      }
+
+      &--mobile {
+        aspect-ratio: 9 / 16;
+      }
+
+      &--desktop {
+        aspect-ratio: 16 / 9;
+      }
+    }
+  }
+}

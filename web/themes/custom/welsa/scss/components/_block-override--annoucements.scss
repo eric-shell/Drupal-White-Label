@@ -1,0 +1,57 @@
+.layout__region--announcements {
+  display: none;
+  position: relative;
+
+  .block {
+    z-index: 200;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 12px 48px;
+    width: 100%;
+    z-index: 495;
+    position: relative;
+  }
+
+  .field-item__body {
+    margin: 0;
+
+    p {
+      padding: 0;
+    }
+  }
+
+  .field__field-link {
+    width: auto;
+    padding: 0 0 0 12px;
+  }
+
+  .announcements__dismiss {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    z-index: 500;
+    overflow: hidden;
+    text-indent: -9999px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: $white;
+      mask-image: url(../../images/icons/icon__close.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+  }
+}

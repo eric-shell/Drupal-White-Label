@@ -1,0 +1,25 @@
+uuid: d6813458-278e-4c6a-a0d9-c26a05cdb2df
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_video
+    - field.storage.block_content.field_desktop_overlay_opacity
+id: block_content.background_video.field_desktop_overlay_opacity
+field_name: field_desktop_overlay_opacity
+entity_type: block_content
+bundle: background_video
+label: 'Desktop Overlay Opacity'
+description: "<p>Use this value to adjust the opacity of the desktop video overlay (0% - 100%). If text is challenging to read on top of the video (depending on the UI) you may want to increase this value to meet ADA accessibility standards.</p>\r\n<ul>\r\n<li>0 = Completely transparent, no overlay.</li>\r\n<li>100 = Completely opaque, solid black overlay.</li>\r\n</ul>"
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

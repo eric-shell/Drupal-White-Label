@@ -1,0 +1,23 @@
+uuid: 6657ea13-4994-411e-9c4f-a0f4af4954f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_content
+    - field.storage.block_content.field_display_functionality
+  module:
+    - options
+id: block_content.full_content.field_display_functionality
+field_name: field_display_functionality
+entity_type: block_content
+bundle: full_content
+label: 'Display Functionality'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: stacked
+default_value_callback: ''
+settings: {  }
+field_type: list_string

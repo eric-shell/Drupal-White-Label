@@ -1,0 +1,50 @@
+uuid: a8a769fe-e0c3-46b1-a108-32ed4ae181d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordions
+    - field.field.block_content.accordions.field_accordions
+    - field.field.block_content.accordions.field_background_color
+    - field.field.block_content.accordions.field_display_type
+    - field.field.block_content.accordions.field_header
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: block_content.accordions.default
+targetEntityType: block_content
+bundle: accordions
+mode: default
+content:
+  field_accordions:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_display_type:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_header:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

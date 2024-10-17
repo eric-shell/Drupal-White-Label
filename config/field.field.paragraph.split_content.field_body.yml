@@ -1,0 +1,22 @@
+uuid: e1dfbf0e-5428-4234-b38f-36daf4b7027a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.split_content
+  module:
+    - text
+id: paragraph.split_content.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: split_content
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

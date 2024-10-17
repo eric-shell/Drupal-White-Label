@@ -1,0 +1,8 @@
+uuid: ea93e236-52e1-47c3-9ef2-63164e74bdbc
+langcode: en
+status: true
+dependencies: {  }
+id: collection
+label: Collection
+revision: false
+description: 'A <b>Collection</b> block contains image, body and link fields that display as a list / grid.'

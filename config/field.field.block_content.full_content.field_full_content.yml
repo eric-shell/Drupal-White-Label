@@ -1,0 +1,43 @@
+uuid: 5959e7f2-c4b4-464f-80da-a37dc0752941
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.full_content
+    - field.storage.block_content.field_full_content
+    - paragraphs.paragraphs_type.full_content
+  module:
+    - entity_reference_revisions
+id: block_content.full_content.field_full_content
+field_name: field_full_content
+entity_type: block_content
+bundle: full_content
+label: 'Full Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      full_content: full_content
+    negate: 0
+    target_bundles_drag_drop:
+      accordions:
+        weight: 6
+        enabled: false
+      collection:
+        weight: 7
+        enabled: false
+      full_content:
+        weight: 8
+        enabled: true
+      split_content:
+        weight: 9
+        enabled: false
+      tabs:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

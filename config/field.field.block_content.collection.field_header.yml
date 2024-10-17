@@ -1,0 +1,22 @@
+uuid: 06a13d96-c78e-4764-8481-34d556e7db6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collection
+    - field.storage.block_content.field_header
+  module:
+    - text
+id: block_content.collection.field_header
+field_name: field_header
+entity_type: block_content
+bundle: collection
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

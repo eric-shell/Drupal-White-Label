@@ -1,0 +1,8 @@
+uuid: 27dd2357-e39a-466c-83e6-5049c47522cd
+langcode: en
+status: true
+dependencies: {  }
+id: basic
+label: Basic
+revision: false
+description: 'A <b>Basic</b> block contains body, link and color selection fields for simple content displays.'

@@ -1,0 +1,21 @@
+uuid: db560cd8-52e8-4565-bd34-da1c1489e783
+langcode: en
+status: true
+dependencies: {  }
+name: extra_large
+label: 'Extra Large (1440px wide)'
+effects:
+  2faa0f17-d52e-4d95-9ca2-61392a7d6d3f:
+    uuid: 2faa0f17-d52e-4d95-9ca2-61392a7d6d3f
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: null
+      upscale: false
+  255a86ed-f03b-4479-b967-2a6b7cc584b3:
+    uuid: 255a86ed-f03b-4479-b967-2a6b7cc584b3
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

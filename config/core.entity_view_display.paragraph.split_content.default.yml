@@ -1,0 +1,98 @@
+uuid: 73bed101-5993-4777-8999-3f98cabeb81a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.split_content.field_background_color
+    - field.field.paragraph.split_content.field_body
+    - field.field.paragraph.split_content.field_image
+    - field.field.paragraph.split_content.field_image_position
+    - field.field.paragraph.split_content.field_link
+    - paragraphs.paragraphs_type.split_content
+    - responsive_image.styles.half_width
+  module:
+    - blazy
+    - link
+    - options
+    - text
+id: paragraph.split_content.default
+targetEntityType: paragraph
+bundle: split_content
+mode: default
+content:
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      class: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: auto
+      preload: false
+      responsive_image_style: half_width
+      use_theme_field: false
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image_position:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

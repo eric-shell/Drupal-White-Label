@@ -1,0 +1,81 @@
+uuid: bec9c881-a918-462e-916d-cf5c56143188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.collection.field_body
+    - field.field.paragraph.collection.field_image
+    - field.field.paragraph.collection.field_link
+    - paragraphs.paragraphs_type.collection
+    - responsive_image.styles.half_width
+  module:
+    - blazy
+    - link
+    - text
+id: paragraph.collection.default
+targetEntityType: paragraph
+bundle: collection
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      class: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: auto
+      preload: false
+      responsive_image_style: half_width
+      use_theme_field: false
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

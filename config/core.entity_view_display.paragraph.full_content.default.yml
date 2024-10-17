@@ -1,0 +1,90 @@
+uuid: 3cea3ad2-1df5-41cc-ab16-fd52d70bc0ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_content.field_background_color
+    - field.field.paragraph.full_content.field_body
+    - field.field.paragraph.full_content.field_image
+    - field.field.paragraph.full_content.field_link
+    - paragraphs.paragraphs_type.full_content
+    - responsive_image.styles.full_width
+  module:
+    - blazy
+    - link
+    - options
+    - text
+id: paragraph.full_content.default
+targetEntityType: paragraph
+bundle: full_content
+mode: default
+content:
+  field_background_color:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        alt: '0'
+        title: '0'
+      class: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: auto
+      preload: false
+      responsive_image_style: full_width
+      use_theme_field: false
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

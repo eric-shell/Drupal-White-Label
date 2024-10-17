@@ -1,0 +1,33 @@
+uuid: 45ef2306-9ba7-4f56-880b-5f6d45ea84dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_content
+    - field.field.block_content.split_content.field_display_functionality
+    - field.field.block_content.split_content.field_split_content
+  module:
+    - entity_reference_revisions
+    - options
+id: block_content.split_content.default
+targetEntityType: block_content
+bundle: split_content
+mode: default
+content:
+  field_display_functionality:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_split_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

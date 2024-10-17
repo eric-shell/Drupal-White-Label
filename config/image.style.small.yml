@@ -1,0 +1,21 @@
+uuid: 7fd39560-b10a-4cae-b9e6-66a64ce855a5
+langcode: en
+status: true
+dependencies: {  }
+name: small
+label: 'Small (425px wide)'
+effects:
+  a66d5cc5-6660-46c8-9891-087448064308:
+    uuid: a66d5cc5-6660-46c8-9891-087448064308
+    id: image_scale
+    weight: 1
+    data:
+      width: 425
+      height: null
+      upscale: false
+  76839397-a40f-47e8-b050-6da5e4cbb21b:
+    uuid: 76839397-a40f-47e8-b050-6da5e4cbb21b
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

@@ -1,0 +1,24 @@
+uuid: d38b14ad-ffe7-428c-916c-7953d61a4504
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.basic.body
+    - field.field.node.basic.field_metatags
+    - node.type.basic
+  module:
+    - user
+id: node.basic.teaser
+targetEntityType: node
+bundle: basic
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_metatags: true

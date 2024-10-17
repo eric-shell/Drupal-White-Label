@@ -1,0 +1,10 @@
+.block:not(.layout-builder-block):not(.block--local-tasks) {
+
+  @include breakpoint(lg) {
+    opacity: 0;
+
+    &.scroll-animate {
+      animation: .5s fromBottom ease-out forwards;
+    }
+  }
+}

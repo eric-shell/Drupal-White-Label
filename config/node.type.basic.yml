@@ -1,0 +1,17 @@
+uuid: 2af5ac42-0274-4357-80f8-9bb440e36637
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Basic
+type: basic
+description: 'Use <b>Basic</b> pages for static content like error pages and legal documentation.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

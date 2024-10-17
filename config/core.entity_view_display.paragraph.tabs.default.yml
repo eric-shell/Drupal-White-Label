@@ -1,0 +1,30 @@
+uuid: 85050048-480d-4a64-8409-664c10bb7948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_body
+    - field.field.paragraph.tabs.field_label
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - text
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_label:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

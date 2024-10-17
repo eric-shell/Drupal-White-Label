@@ -1,0 +1,56 @@
+// Brand colors
+$blue-lighter: #F2F6Fb;
+$blue-light: #B5DEEC;
+$blue-medium: #0057A8;
+$blue-dark: #002855;
+$blue-darker: #001328;
+$green: #68A51D;
+$orange: #E87722;
+$red: #D22630;
+
+// Grayscale colors
+$white: #FFFFFF;
+$black: #000000;
+$gray-lighter: #FAFAFC;
+$gray-light: #F3F3F5;
+$gray-medium: #8E8C99;
+$gray-dark: #3F3E46;
+$gray-darker: #202022;
+
+// Element colors
+$headerColor: $blue-dark;
+$textColor: $black;
+$shadow-light: 0 6px 12px 12px rgba($black,.035);
+$shadow-medium: 0 12px 24px 12px rgba($black,.25);
+$shadow-dark: 0 12px 24px 12px rgba($black,.5);
+
+$colors: (
+  'black': $black,
+  'blue-lighter': $blue-lighter,
+  'blue-light': $blue-light,
+  'blue-medium': $blue-medium,
+  'blue-dark': $blue-dark,
+  'blue-darker': $blue-darker,
+  'gray-lighter': $gray-lighter,
+  'gray-light': $gray-light,
+  'gray-medium': $gray-medium,
+  'gray-dark': $gray-dark,
+  'gray-darker': $gray-darker,
+  'green': $green,
+  'orange': $orange,
+  'red': $green,
+  'white': $white
+);
+
+// Mixin for background and color classes
+@mixin generate-classes($prefix, $property) {
+  @each $name, $color in $colors {
+    .#{$prefix}--#{$name}.#{$prefix}--#{$name}.#{$prefix}--#{$name} {
+      #{$property}: $color;
+    }
+  }
+}
+
+// Generating background and color classes
+@include generate-classes('text', 'color');
+@include generate-classes('background', 'background');

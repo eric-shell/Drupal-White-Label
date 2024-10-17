@@ -1,0 +1,105 @@
+.block--tabs {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 36px 24px 48px;
+
+    @include breakpoint(lg) {
+      padding: 64px 48px 80px;
+    }
+  }
+
+  .field-item__field-header {
+    padding: 0 0 24px;
+    max-width: $md-width;
+
+    @include breakpoint(lg) {
+      padding: 0 0 48px;
+    }
+
+    @include headings {
+      padding: 0 0 24px;
+    }
+  }
+
+  .field-item__field-tabs {
+    width: 100%;
+    padding-top: 48px;
+  }
+
+  .select__wrapper {
+    margin: 0 0 24px;
+  }
+
+  .tabs {
+
+    @include breakpoint(lg) {
+      border-radius: 12px;
+      background: $blue-lighter;
+      box-shadow: $shadow-light;
+      overflow: hidden;
+    }
+  }
+
+  .tab {
+
+    &__titles {
+      display: flex;
+      position: relative;
+      z-index: 100;
+      background: $white;
+      list-style: none;
+    }
+
+    &__title {
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding: 24px;
+      background: $blue-lighter;
+
+      &:hover,
+      &:focus {
+        border-bottom: 5px solid $orange;
+        outline: 0;
+      }
+
+      &.active {
+        cursor: default;
+        background: $white;
+        border-bottom: 5px solid $blue-dark;
+      }
+    }
+
+    &__content {
+      display: none;
+      width: 100%;
+      padding: 24px;
+      background: $white;
+
+      @include mobileOnly {
+        border-radius: 12px;
+        box-shadow: $shadow-light;
+        overflow: hidden;
+      }
+
+      @include breakpoint(lg) {
+        padding: 48px;
+      }
+
+      &.active {
+        display: block;
+
+        > * {
+          animation: fadeIn .5s ease-out both;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,22 @@
+uuid: 05a6ed25-c335-4c9c-8a46-e913bc5b67c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordions
+    - field.storage.block_content.field_header
+  module:
+    - text
+id: block_content.accordions.field_header
+field_name: field_header
+entity_type: block_content
+bundle: accordions
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

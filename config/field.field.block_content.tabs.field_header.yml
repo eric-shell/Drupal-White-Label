@@ -1,0 +1,22 @@
+uuid: 2b9c2649-6462-441a-bb1b-b2e3e3c0a4b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tabs
+    - field.storage.block_content.field_header
+  module:
+    - text
+id: block_content.tabs.field_header
+field_name: field_header
+entity_type: block_content
+bundle: tabs
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

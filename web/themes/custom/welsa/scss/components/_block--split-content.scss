@@ -1,0 +1,86 @@
+.block--split-content {
+  position: relative;
+  z-index: 40;
+
+  .paragraph {
+
+    &__type--split-content {
+      color: $black;
+      height: 100%;
+    }
+
+    &__container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      @include breakpoint(lg) {
+        justify-content: center;
+        flex-direction: row;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include breakpoint(lg) {
+        width: 50%;
+        padding: 48px;
+        align-items: flex-start;
+      }
+
+      @include breakpoint(xl) {
+        padding: 48px 96px;
+      }
+    }
+
+    &__body {
+      margin: 0 auto;
+    }
+
+    &__image {
+      width: 100%;
+
+      @include breakpoint(lg) {
+        width: 50%;
+      }
+
+      .field-item__field-media-image {
+        display: flex;
+      }
+
+      img {
+        width: 100%;
+        aspect-ratio: 6/5;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .field-item__field-body {
+
+    @include breakpoint(lg) {
+      max-width: $md-width;
+      width: 100%;
+    }
+
+    @include headings {
+      padding: 0 0 24px;
+    }
+  }
+
+  @include field-links(flex-start);
+
+  .image--left {
+
+    @include breakpoint(lg) {
+      flex-direction: row-reverse;
+    }
+  }
+}

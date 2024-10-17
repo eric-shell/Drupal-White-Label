@@ -1,0 +1,43 @@
+uuid: d7558b07-f2ab-4c11-b36f-244f773fc0be
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.tabs
+    - field.storage.block_content.field_tabs
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+id: block_content.tabs.field_tabs
+field_name: field_tabs
+entity_type: block_content
+bundle: tabs
+label: Tabs
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tabs: tabs
+    negate: 0
+    target_bundles_drag_drop:
+      accordions:
+        weight: 6
+        enabled: false
+      collection:
+        weight: 7
+        enabled: false
+      full_content:
+        weight: 8
+        enabled: false
+      split_content:
+        weight: 9
+        enabled: false
+      tabs:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

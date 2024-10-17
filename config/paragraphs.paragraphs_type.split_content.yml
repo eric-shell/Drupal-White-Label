@@ -1,0 +1,10 @@
+uuid: 99363e49-b252-47d2-8bc7-f9101606879c
+langcode: en
+status: true
+dependencies: {  }
+id: split_content
+label: 'Split Content'
+icon_uuid: null
+icon_default: null
+description: 'A <b>Split Content</b> paragraph contains image, body and link fields that display as a 50/50 width, image based hero / slider or stacked list.'
+behavior_plugins: {  }

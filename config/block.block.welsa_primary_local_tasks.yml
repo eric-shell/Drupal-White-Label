@@ -1,0 +1,22 @@
+uuid: 61d71b8b-ca84-4dcb-b3a5-fcb7b3c29a9b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - welsa
+_core:
+  default_config_hash: ACjBZI5shAMiiUpsz-inLYVXDqNNXRnSzAWV3kV_8Hw
+id: welsa_primary_local_tasks
+theme: welsa
+region: admin_tools
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

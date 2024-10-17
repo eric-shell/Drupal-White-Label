@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function welsa_preprocess_html(array &$vars)
+{
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if (is_object($node)) {
+        $vars['attributes']['class'][] = 'page__node--' . $node->id();
+    }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function welsa_preprocess_block(&$vars) {
+    if (isset($vars["elements"]["#id"])) {
+        $block = \Drupal\block\Entity\Block::load($vars['elements']['#id']);
+        $region = $block->getRegion();
+        $vars['attributes']['region'] = $region;
+    }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function welsa_theme_suggestions_alter(array &$suggestions, array &$vars, $hook)
+{
+    if ($hook === 'block') {
+        if ($suggestions[1] == 'block__block_content') {
+            $bundle = $vars['elements']['content']['#block_content']->bundle();
+            $vars['bundle'] = $bundle;
+            $suggestions[] = 'block__block_content__' . $bundle;
+        }
+    }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function welsa_theme_suggestions_node_alter(array &$suggestions, array $vars)
+{
+    $node_title = \Drupal::transliteration()->transliterate($vars['elements']['#node']->getTitle());
+    $suggestions[] = 'node__' . preg_replace('/[^a-z0-9_]+/', '_', mb_strtolower($node_title));
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function welsa_theme_suggestions_block_alter(array &$suggestions, array &$vars)
+{
+    if (isset($vars['elements']['content']['#block_content'])) {
+        array_splice($suggestions, 1, 0, 'block__bundle__' . $vars['elements']['content']['#block_content']->bundle());
+        $label = $vars['elements']['#configuration']['label'];
+        $label = preg_replace('/[^A-Za-z0-9\-]/', '', $label); // Removes special chars.
+        array_splice($suggestions, 2, 0, 'block__label__' . str_replace(' ', '-', strtolower($label)));
+    }
+}

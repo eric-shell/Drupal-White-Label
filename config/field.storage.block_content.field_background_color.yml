@@ -1,0 +1,57 @@
+uuid: 0ba153e5-6ccf-4e71-9eb9-dbaae9d035ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background_color
+field_name: field_background_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: black
+      label: Black
+    -
+      value: blue_lighter
+      label: 'Blue Lighter'
+    -
+      value: blue_light
+      label: 'Blue Light'
+    -
+      value: blue_medium
+      label: 'Blue Medium'
+    -
+      value: blue_dark
+      label: 'Blue Dark'
+    -
+      value: blue_darker
+      label: 'Blue Darker'
+    -
+      value: gray_light
+      label: 'Gray Light'
+    -
+      value: gray_medium
+      label: 'Gray Medium'
+    -
+      value: gray_dark
+      label: 'Gray Dark'
+    -
+      value: green
+      label: Green
+    -
+      value: orange
+      label: Orange
+    -
+      value: white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

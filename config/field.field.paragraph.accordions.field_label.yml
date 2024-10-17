@@ -1,0 +1,22 @@
+uuid: 3a974b3a-fb16-4f10-b17b-9e6a252153c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.accordions
+  module:
+    - text
+id: paragraph.accordions.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: accordions
+label: Label
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

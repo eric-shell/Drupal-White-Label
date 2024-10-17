@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Custom theme implementation of a responsive image. Added progressive image in front.
+ */
+#}
+{% if output_image_tag %}
+  {{ img_element }}
+{% else %}
+  <div class="responsive-image__wrapper">
+    <picture>
+      {% if sources %}
+        {% for source_attributes in sources %}
+          <source{{ source_attributes }}/>
+        {% endfor %}
+      {% endif %}
+      {# The controlling image, with the fallback image in srcset. #}
+      {{ img_element }}
+    </picture>
+  </div>
+{% endif %}

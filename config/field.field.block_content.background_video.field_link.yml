@@ -1,0 +1,23 @@
+uuid: 10d9203a-acf7-417e-b9ef-a242c9ff0961
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_video
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.background_video.field_link
+field_name: field_link
+entity_type: block_content
+bundle: background_video
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,57 @@
+.block--local-tasks {
+  z-index: 100;
+  background: $blue-medium;
+  border-top: 6px solid $blue-dark;
+  text-align: center;
+
+  .select__wrapper {
+
+    &:before,
+    &:after {
+      background: $white;
+    }
+
+    select {
+      border: 0;
+      color: $white;
+      background: $blue-medium;
+      border-radius: 0;
+      text-align: center;
+    }
+  }
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
+
+    li {
+      display: block;
+    }
+
+    a {
+      @include font-body;
+      color: $white;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      padding: 12px 24px;
+      display: inline-block;
+      transition: color .25s ease-out, background .25s ease-out;
+
+      &:hover,
+      &:focus {
+        background: $blue-dark;
+        transition: color .125s ease-out, background .125s ease-out;
+      }
+
+      @include breakpoint(md) {
+        width: auto;
+      }
+    }
+  }
+}

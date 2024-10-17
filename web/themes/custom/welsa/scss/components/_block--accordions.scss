@@ -1,0 +1,90 @@
+.block--accordions {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 36px 24px;
+
+    @include breakpoint(lg) {
+      padding: 64px 48px;
+    }
+  }
+
+  .field-item__field-header {
+    padding: 0 0 24px;
+    max-width: $md-width;
+
+    @include breakpoint(lg) {
+      padding: 0 0 48px;
+    }
+
+    @include headings {
+      padding: 0 0 24px;
+    }
+  }
+
+  .field__field-accordions {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .paragraph__label {
+    width: 100%;
+    text-align: left;
+    padding: 24px 80px 24px 24px;
+    position: relative;
+
+    &:after {
+      content:'';
+      cursor: pointer;
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      width: 32px;
+      height: 32px;
+      display: block;
+      background: $blue-dark;
+      mask-image: url(../../images/icons/icon__arrow.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      transform: rotate(90deg);
+      transition: transform ease-out .25s;
+    }
+  }
+
+  .paragraph__body {
+    display: none; // Hidden for initial state of accordions
+    padding: 0 24px 24px;
+  }
+
+  .field-item__field-accordions + .field-item__field-accordions {
+    margin-top: 24px;
+  }
+
+  .accordion--open {
+
+    .paragraph__label {
+
+      &:after {
+        transform: rotate(-90deg);
+        transition: transform ease-out .125s;
+      }
+    }
+  }
+
+  &.display__type--cards {
+
+    .paragraph__type--accordions {
+      border-radius: 12px;
+      background: $white;
+      box-shadow: $shadow-light;
+
+      @include breakpoint(lg) {
+        padding: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.view-content-recent {
+
+  .item-list {
+    padding: 24px 0;
+
+    .views-field {
+      padding: 16px;
+
+      &-title {
+        flex-basis: 30%;
+      }
+
+      &-uid {
+        flex-basis: 20%;
+        text-align: center;
+      }
+
+      &-changed {
+        flex-basis: 20%;
+        text-align: center;
+      }
+
+      &-type {
+        flex-basis: 10%;
+        text-align: center;
+      }
+    }
+
+    > ul > li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $gray-lighter;
+
+      &:nth-child(even) {
+        background: $gray-light;
+      }
+    }
+  }
+
+  .dropbutton {
+    @include cta--primary;
+
+    & {
+      min-height: 48px;
+      flex-direction: column;
+    }
+
+    .secondary-action {
+      margin-top: 8px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dropbutton-multiple .dropbutton-widget {
+    padding: 0;
+  }
+}

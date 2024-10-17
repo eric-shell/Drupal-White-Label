@@ -1,0 +1,459 @@
+$submenu--width: 250px;
+
+@mixin submenu($background--active, $column--width: $submenu--width) {
+
+  @include breakpoint(lg) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: $submenu--width;
+    padding: 24px 0;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  > li {
+    width: 100%;
+
+    @include breakpoint(lg) {
+      max-width: $column--width;
+    }
+
+    a {
+      font-size: 14px;
+      padding: 12px 24px;
+      display: block;
+      justify-content: flex-start;
+      text-align: left;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+
+        @include breakpoint(lg) {
+          background: $background--active;
+        }
+      }
+    }
+
+    &.menu-item--expanded {
+
+      &:hover,
+      &:focus-within {
+
+        @include breakpoint(lg) {
+          background: $background--active;
+          border-right: 5px solid $orange;
+        }
+
+        > ul {
+
+          @include breakpoint(lg) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Creating a better header display for Drupal users
+.user-logged-in {
+
+  .header__container {
+    position: relative;
+  }
+}
+
+.header {
+  display: block;
+  position: relative;
+  z-index: 495;
+  width: 100%;
+  min-height: 58px;
+
+  @include breakpoint(lg) {
+    min-height: 72px;
+  }
+
+  &.mobile--active {
+    z-index: 1200;
+
+    @include breakpoint(lg) {
+      z-index: 495;
+    }
+  }
+
+  .menu__toggle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 58px;
+    z-index: 1000;
+    overflow: hidden;
+    text-indent: -9999px;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 36px;
+      background: $blue-dark;
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+
+    &--open {
+
+      &:before {
+        mask-image: url(../../images/icons/icon__menu.svg);
+      }
+    }
+
+    &--close {
+
+      &:before {
+        mask-image: url(../../images/icons/icon__close.svg);
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    box-shadow: 1px 3px 7px rgba($black, 0.05);
+  }
+
+  &__menu {
+    width: 100%;
+    height: 58px;
+    padding: 0 16px;
+    margin: 0 auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+
+
+    @include breakpoint(lg) {
+      height: 72px;
+      padding: 0 24px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint(lg) {
+      padding: 0;
+      justify-content:space-between;
+    }
+  }
+
+  &__logo {
+    background: url(../../images/branding/logo--dark.svg) center center no-repeat;
+    width: 121px;
+    height: 27px;
+    overflow: hidden;
+    text-indent: -9999px;
+    flex-shrink: 0;
+    margin-left: 50px;
+
+    @include breakpoint(lg) {
+      margin-left: 0;
+    }
+  }
+
+  #block-welsa-primarymenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    overflow-y: scroll;
+    transition: left .125s ease-out;
+
+    @include breakpoint(lg) {
+      display: block;
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      background: none;
+      overflow-y: visible;
+      margin-left: 24px;
+      flex-grow: 1;
+    }
+
+    &.mobile--active {
+      display: block;
+      left: 0;
+      z-index: 1100;
+      transition: left .25s ease-out;
+    }
+
+    // Menu defaults
+    .menu {
+
+      a:not([class*="cta--"]) {
+        @include font-body;
+        display: flex;
+        color: $blue-dark;
+        text-decoration: none;
+        position: relative;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      [class*="cta--"] {
+        height: 44px;
+        margin: 12px 24px;
+
+        @include breakpoint(lg) {
+          margin: 0 0 0 8px;
+          align-self: center;
+        }
+      }
+
+      // Configure submenus on mobile
+      &-item--expanded {
+
+        @include mobileOnly {
+          position: relative;
+        }
+
+        .menu {
+
+          @include mobileOnly {
+            display: none;
+          }
+        }
+      }
+
+      // Hiding the Home menu globally for the desired screen sizes
+      &-item--home {
+
+        @include breakpoint(lg) {
+          display: none !important;
+        }
+      }
+    }
+
+    .submenu__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45px;
+      height: 45px;
+      background: $blue-dark;
+      mask-image: url(../../images/icons/icon__arrow.svg);
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: 24px 24px;
+      transform: rotate(90deg);
+      transition: transform ease-out .25s;
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+
+      &--open {
+        transform: rotate(-90deg);
+        transition: transform ease-out .125s;
+      }
+    }
+
+    // First menu level overrides
+    .menu__level--1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      padding: 58px 0 0;
+
+      @include breakpoint(lg) {
+        flex-direction: row;
+        padding: 0;
+      }
+
+      > li {
+        // position: relative; // Uncomment to have second level menu items display directly below their parent item
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include breakpoint(lg) {
+          flex-direction: row;
+          height: 100%;
+          width: auto;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+          background: none;
+
+          > a:not([class*="cta--"]) {
+
+            @include breakpoint(lg) {
+              background: rgba($blue-lighter, .5);
+              text-decoration: none;
+            }
+
+            &:before {
+
+              @include breakpoint(lg) {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        > a:not([class*="cta--"]) {
+          @include font-body;
+          padding: 12px 24px;
+          text-align: left;
+
+          @include breakpoint(lg) {
+            padding: 8px 16px;
+            text-align: center;
+          }
+
+          @include breakpoint(xl) {
+            padding: 8px 24px;
+          }
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+
+            @include breakpoint(lg) {
+              text-decoration: none;
+            }
+          }
+
+          &:before {
+
+            @include breakpoint(lg) {
+              content: '';
+              width: 100%;
+              height: 5px;
+              background: $orange;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              opacity: 0;
+            }
+          }
+        }
+
+        &.is-active {
+
+          a:before {
+
+            @include breakpoint(lg) {
+              opacity: 1;
+            }
+          }
+        }
+
+        &.menu-item--expanded {
+
+          &:hover > ul,
+          &:focus-within > ul {
+
+            @include breakpoint(lg) {
+              display: block;
+            }
+          }
+        }
+
+        &.menu-item--active-trail > a {
+
+          &:hover {
+            background: $white;
+            cursor: default;
+          }
+
+          &:before {
+
+            @include breakpoint(lg) {
+              background: $blue-dark;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    // Second menu level overrides
+    .menu__level--2 {
+      @include submenu(rgba($blue-lighter, .5));
+
+      & {
+        background: rgba($blue-lighter, .33333);
+
+        @include breakpoint(lg) {
+          width: calc(#{$submenu--width * 3}); // Enforces 3-column width for displaying submenus
+        }
+      }
+
+      @include breakpoint(lg) {
+        background: $white;
+        top: 100%;
+        left: 0;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 10px 20px rgba($black, 0.04), 0 2px 6px rgba($black, 0.04), 0 0 1px rgba($black, 0.04);
+        min-height: 500px; // Uncomment if a fixed height is needed when child menus are taller than parent menus
+        overflow: hidden;
+      }
+    }
+
+    // Third menu level overrides
+    .menu__level--3 {
+      @include submenu($blue-lighter);
+
+      & {
+        background: rgba($blue-lighter, .66666);
+      }
+    }
+
+    // Fourth menu level overrides
+    .menu__level--4 {
+      @include submenu(rgba($blue-light, .15), 100%);
+
+      & {
+        background: $blue-lighter;
+      }
+    }
+  }
+
+  #block-welsa-secondarymenu {
+
+    .menu__level--1 {
+      display: flex;
+
+      li + li {
+        margin-left: 12px;
+      }
+    }
+  }
+}

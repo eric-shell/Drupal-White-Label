@@ -1,0 +1,43 @@
+uuid: 6d6a37a5-982a-48e0-bc18-7b084bd1c786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing.field_metatags
+    - field.field.node.landing.layout_builder__layout
+    - node.type.landing
+  module:
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+id: node.landing.default
+targetEntityType: node
+bundle: landing
+mode: default
+content:
+  field_metatags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true

@@ -1,0 +1,25 @@
+uuid: eb58149a-d38a-4916-86e9-21c6351ed0cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.gutter
+  module:
+    - system
+  theme:
+    - welsa
+id: welsa_gutter
+theme: welsa
+region: gutter
+weight: 0
+provider: null
+plugin: 'system_menu_block:gutter'
+settings:
+  id: 'system_menu_block:gutter'
+  label: Gutter
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

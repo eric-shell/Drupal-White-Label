@@ -1,0 +1,27 @@
+uuid: 12fe5257-fa28-4422-9257-65c8d5a75d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_video
+    - field.storage.block_content.field_desktop_video
+  module:
+    - file
+id: block_content.background_video.field_desktop_video
+field_name: field_desktop_video
+entity_type: block_content
+bundle: background_video
+label: 'Desktop Video'
+description: 'Use this field to upload an <b>h.264</b> encoded <b>.mp4</b> file.  This video should be <b>1920px by 1080px</b> and web optimized for the smallest file size. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'desktop-video/[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: ''
+  description_field: false
+field_type: file

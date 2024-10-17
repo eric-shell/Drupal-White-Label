@@ -1,0 +1,16 @@
+// App Store CTA classes for content authoring in a WYSIWYG
+.store-ctas {
+  display: flex;
+  flex-direction: row;
+}
+
+.store-cta {
+  & + .store-cta {
+    margin: 0 0 0 8px;
+  }
+
+  img {
+    display: block;
+    height: 37px;
+  }
+}

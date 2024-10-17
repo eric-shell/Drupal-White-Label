@@ -1,0 +1,49 @@
+.layout-builder-form,
+.layout-builder-discard-changes,
+.layout-builder-revert-overrides {
+  padding: 20px;
+
+  #edit-submit {
+    @include cta--primary();
+  }
+
+  #edit-cancel,
+  #edit-discard-changes {
+    @include cta--secondary();
+
+    & {
+      margin: 0 24px;
+    }
+  }
+
+  #edit-revert {
+    @include cta--secondary($gray-dark, $black);
+  }
+
+  .vertical-tabs__panes {
+    padding: 16px;
+  }
+
+  .form-item-toggle-content-preview {
+    padding: 12px 0 0;
+    font-size: 24px;
+
+    label {
+      @include font-body;
+      text-transform: uppercase;
+    }
+
+    .form-checkbox {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .layout-builder__message--overrides {
+    padding: 12px 0 0;
+
+    .messages {
+      background: none;
+    }
+  }
+}

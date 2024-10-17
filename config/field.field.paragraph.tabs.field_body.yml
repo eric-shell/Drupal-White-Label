@@ -1,0 +1,22 @@
+uuid: d8fef4a8-dfc0-436d-9c70-4ef30ededd77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - text
+id: paragraph.tabs.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: tabs
+label: Body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

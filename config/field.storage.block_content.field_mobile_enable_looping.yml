@@ -1,0 +1,18 @@
+uuid: 16fee096-86f8-48fd-a9f0-513c5596b936
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_mobile_enable_looping
+field_name: field_mobile_enable_looping
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

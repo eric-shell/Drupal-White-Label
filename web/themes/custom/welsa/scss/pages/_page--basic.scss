@@ -1,0 +1,39 @@
+.node--type-page {
+  padding: 24px 24px 48px;
+
+  @include breakpoint(lg) {
+    padding: 48px 48px 96px;
+  }
+
+  .node__content {
+    max-width: 850px;
+    padding: 24px;
+
+    @include breakpoint(lg) {
+      padding: 48px;
+      margin: 80px auto 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 0 0 16px;
+
+      @include breakpoint(lg) {
+        padding: 0 0 24px;
+      }
+    }
+
+    p + p {
+      padding: 12px 0 0;
+    }
+
+    ol, ul {
+      list-style: initial;
+      padding: 20px 0 20px 30px;
+
+      li::marker {
+        color: $blue-dark;
+      }
+    }
+  }
+}

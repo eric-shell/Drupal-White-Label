@@ -1,0 +1,25 @@
+uuid: 45133524-4880-47e7-ba95-012f90b17016
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4930c330-b9c8-4ab4-b6b1-27cd899987ba'
+  module:
+    - block_content
+  theme:
+    - welsa
+id: welsa_announcements
+theme: welsa
+region: announcements
+weight: 0
+provider: null
+plugin: 'block_content:4930c330-b9c8-4ab4-b6b1-27cd899987ba'
+settings:
+  id: 'block_content:4930c330-b9c8-4ab4-b6b1-27cd899987ba'
+  label: Announcements
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

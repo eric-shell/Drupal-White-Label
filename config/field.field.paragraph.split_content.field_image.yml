@@ -1,0 +1,29 @@
+uuid: ea30930e-826a-4044-8d06-44c9bfd8c416
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.split_content
+id: paragraph.split_content.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: split_content
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

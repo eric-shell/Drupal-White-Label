@@ -1,0 +1,56 @@
+uuid: 416c3c27-665e-4cc9-9f5f-3b88dfbd83e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.extra_large
+    - image.style.large
+    - image.style.medium
+    - image.style.small
+  theme:
+    - welsa
+id: full_width
+label: 'Full Width'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: extra_large
+    breakpoint_id: welsa.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: extra_large
+    breakpoint_id: welsa.xl
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: large
+    breakpoint_id: welsa.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: extra_large
+    breakpoint_id: welsa.lg
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: medium
+    breakpoint_id: welsa.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: large
+    breakpoint_id: welsa.md
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: small
+    breakpoint_id: welsa.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: small
+    breakpoint_id: welsa.sm
+    multiplier: 2x
+breakpoint_group: welsa
+fallback_image_style: medium

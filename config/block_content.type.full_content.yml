@@ -1,0 +1,8 @@
+uuid: b7ff0428-6ec3-4e34-b952-dddfdc694854
+langcode: en
+status: true
+dependencies: {  }
+id: full_content
+label: 'Full Content'
+revision: false
+description: 'A <b>Full Content</b> block contains image, body and link fields that display as a full width, image based hero / slider or stacked list.'

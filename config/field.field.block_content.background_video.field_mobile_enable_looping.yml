@@ -1,0 +1,23 @@
+uuid: 5e8ad82c-99f1-475a-a71b-8de4ab8c3165
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_video
+    - field.storage.block_content.field_mobile_enable_looping
+id: block_content.background_video.field_mobile_enable_looping
+field_name: field_mobile_enable_looping
+entity_type: block_content
+bundle: background_video
+label: "Mobile Enable Looping\t"
+description: 'Check to allow the mobile video to repeat playback continuously.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'on'
+  off_label: 'off'
+field_type: boolean

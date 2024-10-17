@@ -1,0 +1,31 @@
+welsa.sm:
+  label: Small (Phones)
+  mediaQuery: '(min-width: 0)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+welsa.md:
+  label: Medium (iPad)
+  mediaQuery: '(min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+
+welsa.lg:
+  label: Large (iPad Pro)
+  mediaQuery: '(min-width: 1024px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+
+welsa.xl:
+  label: Extra Large (Desktop)
+  mediaQuery: '(min-width: 1440px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x

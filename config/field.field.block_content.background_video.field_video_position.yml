@@ -1,0 +1,23 @@
+uuid: 44ecc80d-f4d2-4e9f-bf78-29b3d33c62c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_video
+    - field.storage.block_content.field_video_position
+  module:
+    - options
+id: block_content.background_video.field_video_position
+field_name: field_video_position
+entity_type: block_content
+bundle: background_video
+label: 'Video Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: stacked
+default_value_callback: ''
+settings: {  }
+field_type: list_string

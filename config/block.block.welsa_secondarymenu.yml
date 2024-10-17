@@ -1,0 +1,25 @@
+uuid: 048a6d8c-983d-462a-8fbd-7c40aa34ebc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary-menu
+  module:
+    - system
+  theme:
+    - welsa
+id: welsa_secondarymenu
+theme: welsa
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:secondary-menu'
+settings:
+  id: 'system_menu_block:secondary-menu'
+  label: 'Secondary Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

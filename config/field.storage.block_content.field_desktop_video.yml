@@ -1,0 +1,23 @@
+uuid: 53de20e5-c580-406d-8151-3834f8957924
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+id: block_content.field_desktop_video
+field_name: field_desktop_video
+entity_type: block_content
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

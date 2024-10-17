@@ -1,0 +1,23 @@
+name: 'Welsa'
+type: theme
+base theme: false
+description: 'A custom theme created by Eric Shell for an enterprise White Label Application.'
+package: welsa
+core_version_requirement: ^9 || ^10
+version: '1.0.0'
+
+libraries:
+  - welsa/global-styling
+
+ckeditor5-stylesheets:
+  - dist/css/wysiwyg.min.css
+
+regions:
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  header: 'Header'
+  admin_tools: 'Admin Tools'
+  announcements: 'Announcements'
+  content: 'Content'
+  footer: 'Footer'
+  gutter: 'Gutter'

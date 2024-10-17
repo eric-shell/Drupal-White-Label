@@ -1,0 +1,23 @@
+uuid: 77a6c6d7-3ff5-4ce3-9218-0dcff06a61d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collection
+    - field.storage.block_content.field_display_type
+  module:
+    - options
+id: block_content.collection.field_display_type
+field_name: field_display_type
+entity_type: block_content
+bundle: collection
+label: 'Display Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: cards
+default_value_callback: ''
+settings: {  }
+field_type: list_string

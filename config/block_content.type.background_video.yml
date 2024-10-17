@@ -1,0 +1,8 @@
+uuid: 417323f1-71df-4d9f-8304-03458367bc9f
+langcode: en
+status: true
+dependencies: {  }
+id: background_video
+label: 'Background Video'
+revision: false
+description: 'A <b>Background Video</b> block contains video, body, link fields for animated backdrop video and content displays.'

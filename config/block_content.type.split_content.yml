@@ -1,0 +1,8 @@
+uuid: fb3845bc-2fbe-44ff-9dce-bdc129a5e0ac
+langcode: en
+status: true
+dependencies: {  }
+id: split_content
+label: 'Split Content'
+revision: false
+description: 'A <b>Split Content</b> block contains image, body and link fields that display as a 50/50 width, image based hero / slider or stacked list.'

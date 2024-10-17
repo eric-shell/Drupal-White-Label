@@ -1,0 +1,8 @@
+uuid: 2a7c2a3d-e286-4763-a757-ac0c5e5968b0
+langcode: en
+status: true
+dependencies: {  }
+id: accordions
+label: Accordions
+revision: false
+description: 'An <b>Accordions</b> block contains label and body fields that display as a toggle-able element.'

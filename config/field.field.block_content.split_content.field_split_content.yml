@@ -1,0 +1,37 @@
+uuid: 491dc0ac-0ab4-4f7d-b4a7-5a983d086374
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.split_content
+    - field.storage.block_content.field_split_content
+    - paragraphs.paragraphs_type.split_content
+  module:
+    - entity_reference_revisions
+id: block_content.split_content.field_split_content
+field_name: field_split_content
+entity_type: block_content
+bundle: split_content
+label: 'Split Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      split_content: split_content
+    negate: 0
+    target_bundles_drag_drop:
+      collection:
+        weight: 4
+        enabled: false
+      slides:
+        weight: 5
+        enabled: false
+      split_content:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

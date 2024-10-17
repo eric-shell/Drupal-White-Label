@@ -34,7 +34,7 @@
     }
 
     a {
-      @include font-body;
+      @include font--body;
       color: $white;
       width: 100%;
       text-align: center;

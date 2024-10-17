@@ -1,16 +1,16 @@
-@mixin font-primary($weight: 400) {
+@mixin font--primary($weight: 400) {
   font-weight: $weight;
   font-family: 'DM Serif Display', serif;
   line-height: 1;
 }
 
-@mixin font-secondary($weight: 400) {
+@mixin font--secondary($weight: 400) {
   font-weight: $weight;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 1;
 }
 
-@mixin font-body($weight: 400) {
+@mixin font--body($weight: 400) {
   font-weight: $weight;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
@@ -37,13 +37,13 @@
 }
 
 html, body {
-  @include font-body;
+  @include font--body;
   color: $textColor;
   -webkit-font-smoothing: antialiased;
 }
 
 @mixin h1 {
-  @include font-primary;
+  @include font--primary;
   font-size: 48px;
   color: $blue-dark;
 
@@ -57,7 +57,7 @@ h1, .h1.h1 {
 }
 
 @mixin h2 {
-  @include font-primary;
+  @include font--primary;
   font-size: 36px;
   color: $blue-dark;
 
@@ -71,7 +71,7 @@ h2, .h2.h2 {
 }
 
 @mixin h3 {
-  @include font-secondary;
+  @include font--secondary;
   font-size: 28px;
 
   @include breakpoint(lg) {
@@ -84,7 +84,7 @@ h3, .h3.h3 {
 }
 
 @mixin h4 {
-  @include font-secondary;
+  @include font--secondary;
   font-size: 23px;
 
   @include breakpoint(lg) {
@@ -97,7 +97,7 @@ h4, .h4.h4 {
 }
 
 @mixin h5 {
-  @include font-secondary;
+  @include font--secondary;
   font-size: 20px;
 
   @include breakpoint(lg) {
@@ -110,7 +110,7 @@ h5, .h5.h5 {
 }
 
 @mixin h6 {
-  @include font-secondary;
+  @include font--secondary;
   font-size: 16px;
 }
 
@@ -126,7 +126,7 @@ p, .p1.p1 {
   }
 
   b, strong {
-    @include font-body;
+    @include font--body;
   }
 }
 
@@ -138,17 +138,17 @@ p, .p1.p1 {
   font-size: 10px;
 }
 
-.e1 {
+.e1.e1 {
   @include font--informal();
   font-size: 32px;
 }
 
-.e2 {
+.e2.e2 {
   @include font--informal();
   font-size: 24px;
 }
 
-.e3 {
+.e3.e3 {
   @include font--informal();
   font-size: 16px;
 }
@@ -162,7 +162,7 @@ sup {
 }
 
 q, blockquote {
-  @include font-body;
+  @include font--body;
   font-size: 18px;
   color: $textColor;
   padding: 16px 0 32px;

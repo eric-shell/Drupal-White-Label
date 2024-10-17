@@ -1,5 +1,5 @@
 @mixin form-label() {
-  @include font-body;
+  @include font--body;
   position: absolute;
   font-size: 14px;
   top: 12px;

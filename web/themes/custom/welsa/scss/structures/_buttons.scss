@@ -1,5 +1,5 @@
 @mixin cta--primary($primary: $blue-medium, $secondary: $blue-dark) {
-  @include font-body;
+  @include font--body;
   font-size: 14px;
   line-height: 1;
   text-align: center;
@@ -43,7 +43,7 @@
 }
 
 @mixin cta--secondary($primary: $blue-light, $secondary: $blue-medium) {
-  @include font-body;
+  @include font--body;
   font-size: 14px;
   line-height: 1;
   text-align: center;
@@ -89,7 +89,7 @@
 }
 
 @mixin cta--tertiary($primary: $white, $secondary: $blue-dark) {
-  @include font-body;
+  @include font--body;
   font-size: 14px;
   line-height: 1;
   text-align: center;

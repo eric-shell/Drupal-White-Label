@@ -5,14 +5,14 @@
   .messages {
     display: flex;
     align-items: center;
-    @include font-body;
+    @include font--body;
     color: $white;
     padding: 12px;
     text-decoration: none;
     background: $green;
 
     a {
-      @include font-body;
+      @include font--body;
       color: $white;
     }
 
@@ -41,7 +41,7 @@
     }
 
     &--error {
-      @include font-body;
+      @include font--body;
       background: $red;
       text-transform: none;
       font-size: 14px;
@@ -56,7 +56,7 @@
     }
 
     .placeholder {
-      @include font-body;
+      @include font--body;
       padding: 0 .25em;
     }
   }

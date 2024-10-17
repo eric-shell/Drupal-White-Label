@@ -94,7 +94,7 @@
         }
 
         > span, > a {
-          @include font-secondary;
+          @include font--secondary;
           display: block;
           color: $white;
           font-size: 24px;

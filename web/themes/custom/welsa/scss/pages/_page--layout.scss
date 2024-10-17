@@ -29,7 +29,7 @@
     font-size: 24px;
 
     label {
-      @include font-body;
+      @include font--body;
       text-transform: uppercase;
     }
 

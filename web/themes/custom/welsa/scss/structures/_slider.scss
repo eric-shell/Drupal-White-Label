@@ -25,7 +25,7 @@
     mask-image: url('../../images/icons/icon__arrow.svg');
     mask-position: 2px center;
     mask-repeat: no-repeat;
-    background-color: $blue-dark;
+    background-color: $blue-medium;
     transition: background-color ease-out .125s;
   }
 
@@ -39,7 +39,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 6px rgba($gray-medium, .5), $shadow-light;
+    box-shadow: 0 0 0 6px rgba($gray-medium, .35), $shadow-light;
   }
 }
 
@@ -107,7 +107,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 6px rgba($gray-medium, .5), $shadow-light;
+      box-shadow: 0 0 0 6px rgba($gray-medium, .35), $shadow-light;
     }
 
     &.slick-active {
@@ -121,7 +121,7 @@
       }
 
       &:focus {
-        box-shadow: 0 0 0 6px rgba($gray-medium, .5), $shadow-light;
+        box-shadow: 0 0 0 6px rgba($gray-medium, .35), $shadow-light;
       }
     }
   }

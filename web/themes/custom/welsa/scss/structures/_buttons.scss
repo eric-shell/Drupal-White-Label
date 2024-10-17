@@ -28,7 +28,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 6px rgba($gray-medium, .5);
+    box-shadow: 0 0 0 6px rgba($gray-medium, .35);
     transition: all .125s ease-out;
   }
 
@@ -74,7 +74,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 6px rgba($gray-medium, .5);
+    box-shadow: 0 0 0 6px rgba($gray-medium, .35);
     transition: all .125s ease-out;
   }
 
@@ -120,7 +120,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 6px rgba($gray-medium, .5);
+    box-shadow: 0 0 0 6px rgba($gray-medium, .35);
     transition: all .125s ease-out;
   }
 

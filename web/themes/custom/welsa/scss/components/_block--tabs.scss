@@ -51,7 +51,6 @@
       display: flex;
       position: relative;
       z-index: 100;
-      background: $white;
       list-style: none;
     }
 
@@ -71,8 +70,12 @@
 
       &.active {
         cursor: default;
+        position: relative;
+        z-index: 60;
         background: $white;
         border-bottom: 5px solid $blue-dark;
+        border-radius: 12px 12px 0 0;
+        box-shadow: 0 -6px 12px 12px rgba($black,.025);
       }
     }
 

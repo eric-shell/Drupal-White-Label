@@ -33,6 +33,14 @@
 
   .select__wrapper {
     margin: 0 0 24px;
+
+    select {
+      @include cta--primary;
+    }
+
+    &:after {
+      background: $white;
+    }
   }
 
   .tabs {

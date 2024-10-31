@@ -1,0 +1,8 @@
+uuid: a37aa63e-c658-4bfa-a512-206ba50d6582
+langcode: en
+status: true
+dependencies: {  }
+id: marquee
+label: Marquee
+revision: false
+description: null

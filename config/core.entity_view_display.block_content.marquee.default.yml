@@ -1,0 +1,30 @@
+uuid: e35a219f-0fae-4c9b-914d-37f236a84c08
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.marquee
+    - field.field.block_content.marquee.field_large_phrase
+    - field.field.block_content.marquee.field_small_phrase
+id: block_content.marquee.default
+targetEntityType: block_content
+bundle: marquee
+mode: default
+content:
+  field_large_phrase:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_small_phrase:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

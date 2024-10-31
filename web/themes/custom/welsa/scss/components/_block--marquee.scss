@@ -1,0 +1,61 @@
+.block--marquee {
+  background: $blue-darker;
+  color: $white;
+
+  .marquee__reel {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: marquee linear both;
+      animation-timeline: view(block);
+      animation-range: cover 0% cover 100%;
+    }
+  }
+
+  .marquee__phrase {
+    position: relative;
+
+    .field-item {
+      color: $white;
+      padding: 0 1em;
+      white-space: nowrap;
+
+      &:not(:first-child):before {
+        content: '\2022';
+        position: relative;
+        left: -1em;
+      }
+    }
+
+    &--small {
+      padding: 12px 0;
+      background: $blue-darker;
+
+      .marquee__reel {
+
+        @media (prefers-reduced-motion: no-preference) {
+          animation-direction: reverse;
+        }
+      }
+    }
+
+    &--large {
+      padding: 24px 0;
+      background: $blue-dark;
+
+      .field-item {
+        font-size: 64px;
+        padding: 0 .5em;
+
+        @include breakpoint(lg) {
+          font-size: 6vw;
+        }
+
+        &:not(:first-child):before {
+          left: -.5em;
+        }
+      }
+    }
+  }
+}

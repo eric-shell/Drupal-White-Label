@@ -1,0 +1,21 @@
+uuid: 08b9b603-85d6-4617-8e4b-cff6f08ef080
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_large_phrase
+field_name: field_large_phrase
+entity_type: block_content
+type: string
+settings:
+  max_length: 1000
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

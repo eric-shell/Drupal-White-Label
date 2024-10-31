@@ -1,0 +1,64 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+  'block',
+  content['#block_content'] ? 'block--' ~ content['#block_content'].bundle|clean_class,
+  content['#block_content'] ? 'background--' ~ content.field_background_color.0["#markup"]|clean_class,
+  elements.content['#block_content'].id() ? 'block__id--' ~ elements.content['#block_content'].id()
+]
+%}
+
+{# Creating repeating list of field values to create enough markup for the rotating/scrolling effect #}
+{% set smallPhrases = [content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase,content.field_small_phrase] %}
+{% set largePhrases = [content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase,content.field_large_phrase] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+      <div class="marquee__phrase marquee__phrase--small h5">
+        <div class="marquee__reel">
+          {{ smallPhrases }}
+        </div>
+      </div>
+      <div class="marquee__phrase marquee__phrase--large h1">
+        <div class="marquee__reel">
+          {{ largePhrases }}
+        </div>
+      </div>
+      <div class="marquee__phrase marquee__phrase--small h5">
+        <div class="marquee__reel">
+          {{ smallPhrases }}
+        </div>
+      </div>
+  {% endblock %}
+</div>

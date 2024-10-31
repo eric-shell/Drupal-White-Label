@@ -1,0 +1,38 @@
+uuid: 5232dd12-b9c0-4f44-824a-1d24ccf315a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.marquee
+    - field.field.block_content.marquee.field_large_phrase
+    - field.field.block_content.marquee.field_small_phrase
+id: block_content.marquee.default
+targetEntityType: block_content
+bundle: marquee
+mode: default
+content:
+  field_large_phrase:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_small_phrase:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

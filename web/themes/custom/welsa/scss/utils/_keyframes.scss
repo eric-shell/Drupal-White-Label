@@ -18,6 +18,15 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes fromRight {
   0% {
     transform: translateX(200px);

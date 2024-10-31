@@ -5,4 +5,4 @@ dependencies: {  }
 id: marquee
 label: Marquee
 revision: false
-description: null
+description: 'A <b>Marquee</b> block contains two phrase fields that use CSS scroll-driven animations.'

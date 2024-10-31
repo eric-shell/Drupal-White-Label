@@ -10,8 +10,8 @@ field_name: field_small_phrase
 entity_type: block_content
 bundle: marquee
 label: 'Small Phrase'
-description: ''
-required: false
+description: 'This phrase will be rendered twice in a small font size and will be the secondary focus of the marquee.  It is encouraged to use a longer phrase here.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

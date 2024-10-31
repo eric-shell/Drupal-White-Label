@@ -10,7 +10,7 @@ field_name: field_large_phrase
 entity_type: block_content
 bundle: marquee
 label: 'Large Phrase'
-description: ''
+description: 'This phrase will be rendered in a large font size and will be the primary focus of the marquee.'
 required: true
 translatable: false
 default_value: {  }

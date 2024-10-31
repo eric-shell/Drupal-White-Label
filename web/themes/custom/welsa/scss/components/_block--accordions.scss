@@ -87,6 +87,12 @@
       background: $white;
       box-shadow: $shadow-light;
 
+      @media (prefers-reduced-motion: no-preference) {
+        animation: reveal linear both;
+        animation-timeline: view(block);
+        animation-range: cover 0% cover 25%;
+      }
+
       @include breakpoint(lg) {
         padding: 24px;
       }

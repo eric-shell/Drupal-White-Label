@@ -45,7 +45,7 @@
   {% block content %}
 
     <div class="video__content">
-      <div class="video__body {% if content.field_video_position.0['#markup']|clean_class == 'stacked' %} 'background--{{ content.field_background_color.0['#markup']|clean_class }}{% endif %}">
+      <div class="video__body {% if content.field_video_position.0['#markup']|clean_class == 'stacked' %}background--{{ content.field_background_color.0['#markup']|clean_class }}{% endif %}">
         {{ content.body }}
         {{ content.field_link }}
       </div>

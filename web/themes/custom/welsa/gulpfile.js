@@ -53,6 +53,9 @@ function themeImg() {
       imagemin.optipng({optimizationLevel: 5}),
       imagemin.svgo({
         plugins: [
+          {keepAriaAttrs: true},
+          {keepRoleAttr: true},
+          {keepDataAttrs: true},
           {removeViewBox: true},
           {removeTitle: false},
           {cleanupIDs: true}

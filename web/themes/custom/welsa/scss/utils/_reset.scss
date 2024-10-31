@@ -102,11 +102,6 @@ img, video, svg {
   height: 100%;
 }
 
-// Prevent content overflow on the main page content wrapper
-.layout-content {
-  overflow: hidden;
-}
-
 // Removing content padding for navigation when logged in as admin (menu is relative)
 .user-logged-in .layout-container {
   padding-top: 0;

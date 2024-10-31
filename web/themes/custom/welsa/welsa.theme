@@ -3,8 +3,7 @@
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  */
-function welsa_preprocess_html(array &$vars)
-{
+function welsa_preprocess_html(array &$vars) {
     $node = \Drupal::routeMatch()->getParameter('node');
     if (is_object($node)) {
         $vars['attributes']['class'][] = 'page__node--' . $node->id();
@@ -25,8 +24,7 @@ function welsa_preprocess_block(&$vars) {
 /**
  * Implements hook_theme_suggestions_alter().
  */
-function welsa_theme_suggestions_alter(array &$suggestions, array &$vars, $hook)
-{
+function welsa_theme_suggestions_alter(array &$suggestions, array &$vars, $hook) {
     if ($hook === 'block') {
         if ($suggestions[1] == 'block__block_content') {
             $bundle = $vars['elements']['content']['#block_content']->bundle();
@@ -39,8 +37,7 @@ function welsa_theme_suggestions_alter(array &$suggestions, array &$vars, $hook)
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function welsa_theme_suggestions_node_alter(array &$suggestions, array $vars)
-{
+function welsa_theme_suggestions_node_alter(array &$suggestions, array $vars) {
     $node_title = \Drupal::transliteration()->transliterate($vars['elements']['#node']->getTitle());
     $suggestions[] = 'node__' . preg_replace('/[^a-z0-9_]+/', '_', mb_strtolower($node_title));
 }
@@ -48,8 +45,7 @@ function welsa_theme_suggestions_node_alter(array &$suggestions, array $vars)
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
-function welsa_theme_suggestions_block_alter(array &$suggestions, array &$vars)
-{
+function welsa_theme_suggestions_block_alter(array &$suggestions, array &$vars) {
     if (isset($vars['elements']['content']['#block_content'])) {
         array_splice($suggestions, 1, 0, 'block__bundle__' . $vars['elements']['content']['#block_content']->bundle());
         $label = $vars['elements']['#configuration']['label'];

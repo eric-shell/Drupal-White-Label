@@ -54,9 +54,9 @@
     {% endfor %}
   </ul>
 
-  <ul class="tab__contents">
+  <div class="tab__contents">
     {% for item in items %}
-      <li
+      <div
         role="tabpanel"
         id="tab{{element['#object'].id.value}}__panel--{{loop.index}}"
         class="tab__content{% if loop.index == '1' %} active{% endif %}"
@@ -64,8 +64,8 @@
         aria-labelledby="tab{{element['#object'].id.value}}__label--{{loop.index}}"
       >
         {{ item.content['#paragraph'].field_body.entity.field_body.0.value|raw }}
-      </li>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 
 </div>

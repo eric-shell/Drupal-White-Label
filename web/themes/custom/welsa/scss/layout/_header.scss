@@ -1,3 +1,5 @@
+@use 'utils' as *;
+
 $submenu--width: 250px;
 
 @mixin submenu($background--active, $column--width: $submenu--width) {

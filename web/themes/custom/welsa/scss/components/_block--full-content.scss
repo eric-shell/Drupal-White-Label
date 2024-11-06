@@ -1,3 +1,6 @@
+@use 'utils' as *;
+@use '../structures/field-links' as *;
+
 .block--full-content {
   position: relative;
   z-index: 50;

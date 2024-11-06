@@ -12,7 +12,7 @@ const sourcemaps = require('gulp-sourcemaps')
 function themeScss() {
   return src('./scss/theme.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({quietDeps: true}).on('error', sass.logError))
     .pipe(prefixer())
     .pipe(clean())
     .pipe(rename('theme.min.css'))
@@ -23,7 +23,7 @@ function themeScss() {
 function themeWysiwyg() {
   return src('./scss/wysiwyg.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({quietDeps: true}).on('error', sass.logError))
     .pipe(prefixer())
     .pipe(clean())
     .pipe(rename('wysiwyg.min.css'))

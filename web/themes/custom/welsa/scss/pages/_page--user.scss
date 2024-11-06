@@ -1,3 +1,7 @@
+@use 'utils' as *;
+@use '../structures/buttons' as *;
+@use '../structures/forms' as *;
+
 // Login and password page
 .user-pass,
 .user-login-form {

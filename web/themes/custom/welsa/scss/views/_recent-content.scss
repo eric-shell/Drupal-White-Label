@@ -1,3 +1,6 @@
+@use 'utils' as *;
+@use '../structures/buttons' as *;
+
 .view-content-recent {
 
   .item-list {

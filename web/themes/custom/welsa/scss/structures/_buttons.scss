@@ -1,3 +1,5 @@
+@use 'utils' as *;
+
 @mixin cta--primary($primary: $blue-medium, $secondary: $blue-dark) {
   @include font--body;
   font-size: 14px;

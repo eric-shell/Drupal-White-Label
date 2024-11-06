@@ -1,3 +1,5 @@
+@use 'utils' as *;
+
 .messages-list,
 .block-system-messages-block {
   z-index: 100;

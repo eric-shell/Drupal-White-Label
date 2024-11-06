@@ -1,4 +1,4 @@
-// https://codyhouse.co/ds/docs/framework/breakpoints
+@use "sass:map";
 
 $xs-width: 380px;
 $sm-width: 425px;
@@ -18,12 +18,12 @@ $breakpoints: (
 
 @mixin breakpoint($breakpoint, $logic: false) {
   @if( $logic ) {
-    @media #{$logic} and (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+    @media #{$logic} and (min-width: map.get($map: $breakpoints, $key: $breakpoint)) { @content; }
   } @else {
-    @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+    @media (min-width: map.get($map: $breakpoints, $key: $breakpoint)) { @content; }
   }
 }
 
 @mixin mobileOnly {
-  @media (max-width: map-get($breakpoints, lg)) { @content ; }
+  @media (max-width: map.get($breakpoints, lg)) { @content ; }
 }

@@ -1,3 +1,6 @@
+@use 'breakpoints' as *;
+@use 'colors' as *;
+
 @mixin font--primary($weight: 400) {
   font-weight: $weight;
   font-family: 'DM Serif Display', serif;

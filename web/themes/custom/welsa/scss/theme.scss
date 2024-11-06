@@ -1,44 +1,36 @@
-// Reset and utilities
-@import './utils/breakpoints';
-@import './utils/colors';
-@import './utils/keyframes';
-@import './utils/reset';
-@import './utils/typography';
-@import './utils/scrollMagic';
-
 // Global theming for items used in various solutions
-@import './structures/admin';
-@import './structures/buttons';
-@import './structures/field-links';
-@import './structures/forms';
-@import './structures/messages';
-@import './structures/slider';
-@import './structures/stores';
+@use './structures/admin';
+@use './structures/buttons';
+@use './structures/field-links';
+@use './structures/forms';
+@use './structures/messages';
+@use './structures/slider';
+@use './structures/stores';
 
 // Document layout formatting and structure
-@import './layout/header';
-@import './layout/footer';
-@import './layout/gutter';
+@use './layout/header';
+@use './layout/footer';
+@use './layout/gutter';
 
 // Content type pages and nodes
-@import './pages/page--basic';
-@import './pages/page--edit';
-@import './pages/page--errors';
-@import './pages/page--layout';
-@import './pages/page--user';
+@use './pages/page--basic';
+@use './pages/page--edit';
+@use './pages/page--errors';
+@use './pages/page--layout';
+@use './pages/page--user';
 
 // View pages and blocks
-@import './views/recent-content';
+@use './views/recent-content';
 
 // System blocks and custom block types
-@import './components/block--accordions';
-@import './components/block--background-video';
-@import './components/block--basic';
-@import './components/block--collection';
-@import './components/block--full-content';
-@import './components/block--marquee';
-@import './components/block--split-content';
-@import './components/block--tabs';
+@use './components/block--accordions';
+@use './components/block--background-video';
+@use './components/block--basic';
+@use './components/block--collection';
+@use './components/block--full-content';
+@use './components/block--marquee';
+@use './components/block--split-content';
+@use './components/block--tabs';
 
 // Custom or individual block overrides (placed here for proper inheritance)
-@import './components/block-override--annoucements';
+@use './components/block-override--annoucements';

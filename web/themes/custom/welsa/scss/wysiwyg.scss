@@ -1,20 +1,7 @@
-// CKEditor 5 themeing
-// https://www.drupal.org/node/3259165
+@use './utils' as *;
 
 .ck-content {
   box-sizing: border-box;
-
-  // Resets and utilities
-  @import './utils/breakpoints';
-  @import './utils/keyframes';
-  @import './utils/colors';
-  @import './utils/reset';
-  @import './utils/typography';
-
-  // Global theming for items used in various solutions
-  @import './structures/buttons';
-  @import './structures/forms';
-  @import './structures/stores';
 
   // Make background off-white to handle white and lighter text
   & {

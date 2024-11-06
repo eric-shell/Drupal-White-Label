@@ -1,3 +1,6 @@
+@use 'utils' as *;
+@use '../structures/field-links' as *;
+
 .block--background-video {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,6 @@
+@use 'utils' as *;
+@use '../structures/field-links' as *;
+
 .block--basic {
   display: flex;
   flex-direction: column;

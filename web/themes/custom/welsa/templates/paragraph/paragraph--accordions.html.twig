@@ -47,15 +47,28 @@
   ]
 %}
 {% block paragraph %}
-  {# Follows ADA compliance per https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/ #}
   <div{{ attributes.addClass(classes) }} >
     {% block content %}
-    <div id="accordion__label--{{ paragraph.id.value }}" class="paragraph__label" aria-controls="accordion__body--{{ paragraph.id.value }}" aria-expanded="false" >
+
+    <div
+      type="button"
+      tabindex="0"
+      id="accordion__label--{{ paragraph.id.value }}"
+      class="paragraph__label"
+      aria-controls="accordion__body--{{ paragraph.id.value }}"
+    >
       {{ content.field_label }}
     </div>
-    <div id="accordion__body--{{ paragraph.id.value }}" class="paragraph__body" role="region" aria-labelledby="accordion__label--{{ paragraph.id.value }}" aria-hidden="true">
+
+    <div
+      id="accordion__body--{{ paragraph.id.value }}"
+      class="paragraph__body"
+      aria-labelledby="accordion__label--{{ paragraph.id.value }}"
+      aria-hidden="true"
+    >
       {{ content.field_body }}
     </div>
+
     {% endblock %}
   </div>
 {% endblock paragraph %}

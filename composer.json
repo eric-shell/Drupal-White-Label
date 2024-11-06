@@ -101,7 +101,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "php-http/discovery": true,
-            "tbachert/spi": false
+            "tbachert/spi": true
         }
     }
 }

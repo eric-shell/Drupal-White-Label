@@ -2,7 +2,7 @@ global-styling:
   version: VERSION
   css:
     base:
-      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: { type: external, minified: false }
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css: { type: external, minified: false }
       dist/css/theme.min.css: {}
   js:
     https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js: { type: external, minified: true }

@@ -1,0 +1,21 @@
+uuid: 40d8a48e-c213-488d-870f-8f4da24aa6a7
+langcode: en
+status: true
+dependencies: {  }
+name: poster_portrait
+label: 'Poster Portrait'
+effects:
+  4e798c86-ad10-4508-ab03-4201c75c23c6:
+    uuid: 4e798c86-ad10-4508-ab03-4201c75c23c6
+    id: image_scale
+    weight: 1
+    data:
+      width: 1080
+      height: 1920
+      upscale: false
+  568a26cb-06f8-4e75-a15c-e5d7f8052f78:
+    uuid: 568a26cb-06f8-4e75-a15c-e5d7f8052f78
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

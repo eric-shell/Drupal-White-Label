@@ -1,0 +1,21 @@
+uuid: b2b97600-7d8b-4d54-aada-ff2d557e688e
+langcode: en
+status: true
+dependencies: {  }
+name: poster_landscape
+label: 'Poster Landscape'
+effects:
+  1b813cdf-3a71-4acb-8bf4-c2f35ad1617a:
+    uuid: 1b813cdf-3a71-4acb-8bf4-c2f35ad1617a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      upscale: false
+  e32ae6e0-8d8a-4dcc-9310-4cc41fe147f1:
+    uuid: e32ae6e0-8d8a-4dcc-9310-4cc41fe147f1
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

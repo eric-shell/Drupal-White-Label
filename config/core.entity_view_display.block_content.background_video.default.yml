@@ -64,7 +64,7 @@ content:
     type: image_url
     label: hidden
     settings:
-      image_style: ''
+      image_style: poster_landscape
     third_party_settings: {  }
     weight: 6
     region: content
@@ -110,7 +110,7 @@ content:
     type: image_url
     label: hidden
     settings:
-      image_style: ''
+      image_style: poster_portrait
     third_party_settings: {  }
     weight: 7
     region: content

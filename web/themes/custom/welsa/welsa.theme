@@ -14,7 +14,7 @@ function welsa_preprocess_html(array &$vars) {
  * Implements hook_preprocess_HOOK() for HTML document templates.
  */
 function welsa_preprocess_block(&$vars) {
-    if (isset($vars["elements"]["#id"])) {
+    if (isset($vars['elements']['#id'])) {
         $block = \Drupal\block\Entity\Block::load($vars['elements']['#id']);
         $region = $block->getRegion();
         $vars['attributes']['region'] = $region;

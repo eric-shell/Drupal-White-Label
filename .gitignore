@@ -63,6 +63,7 @@
 /web/profiles/contrib/
 /web/libraries/
 /web/private/scripts/quicksilver
+/recipes/
 
 
 # Generally you should only ignore the root vendor directory. It's important

@@ -9,26 +9,23 @@ const imagemin = require('gulp-imagemin')
 const prefixer = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
 
-function themeScss() {
-  return src('./scss/theme.scss')
+function processScss(source, outputName) {
+  return src(source)
     .pipe(sourcemaps.init())
     .pipe(sass({silenceDeprecations: ['legacy-js-api']}).on('error', sass.logError))
     .pipe(prefixer())
     .pipe(clean())
-    .pipe(rename('theme.min.css'))
+    .pipe(rename(outputName))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./dist/css'))
 }
 
+function themeScss() {
+  return processScss('./scss/theme.scss', 'theme.min.css');
+}
+
 function themeWysiwyg() {
-  return src('./scss/wysiwyg.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({silenceDeprecations: ['legacy-js-api']}).on('error', sass.logError))
-    .pipe(prefixer())
-    .pipe(clean())
-    .pipe(rename('wysiwyg.min.css'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('./dist/css'))
+  return processScss('./scss/wysiwyg.scss', 'wysiwyg.min.css');
 }
 
 function themeJs() {

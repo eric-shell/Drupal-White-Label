@@ -1,4 +1,4 @@
-@use 'utils' as *;
+@use 'utils/breakpoints' as *;
 
 @mixin field-links($position: center) {
 

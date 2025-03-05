@@ -1,5 +1,7 @@
-@use 'utils' as *;
-@use '../structures/buttons' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/colors' as *;
+@use 'utils/typography' as *;
+@use 'structures/buttons' as *;
 
 .layout-builder-form,
 .layout-builder-discard-changes,

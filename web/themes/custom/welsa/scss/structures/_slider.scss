@@ -1,4 +1,6 @@
-@use 'utils' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/colors' as *;
+@use 'utils/typography' as *;
 
 .slick-track {
   display: flex;

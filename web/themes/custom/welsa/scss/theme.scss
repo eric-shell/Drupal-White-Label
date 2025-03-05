@@ -1,4 +1,7 @@
-// Global theming for items used in various solutions
+@use 'utils/reset';
+@use 'utils/typography';
+@use 'utils/scrollMagic';
+
 @use './structures/admin';
 @use './structures/buttons';
 @use './structures/field-links';
@@ -7,22 +10,18 @@
 @use './structures/slider';
 @use './structures/stores';
 
-// Document layout formatting and structure
 @use './layout/header';
 @use './layout/footer';
 @use './layout/gutter';
 
-// Content type pages and nodes
 @use './pages/page--basic';
 @use './pages/page--edit';
 @use './pages/page--errors';
 @use './pages/page--layout';
 @use './pages/page--user';
 
-// View pages and blocks
 @use './views/recent-content';
 
-// System blocks and custom block types
 @use './components/block--accordions';
 @use './components/block--background-video';
 @use './components/block--basic';
@@ -32,5 +31,4 @@
 @use './components/block--split-content';
 @use './components/block--tabs';
 
-// Custom or individual block overrides (placed here for proper inheritance)
 @use './components/block-override--annoucements';

@@ -1,5 +1,7 @@
-@use 'utils' as *;
-@use '../structures/field-links' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/colors' as *;
+@use 'utils/typography' as *;
+@use 'structures/field-links' as *;
 
 .block--full-content {
   position: relative;

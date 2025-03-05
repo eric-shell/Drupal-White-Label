@@ -1,3 +1,8 @@
+// This file provides scroll animation styles for blocks
+// To be used with @use or @forward in the main theme file
+@use 'keyframes' as *;
+@use 'breakpoints' as *;
+
 .block:not(.layout-builder-block):not(.block--local-tasks) {
 
   @include breakpoint(lg) {

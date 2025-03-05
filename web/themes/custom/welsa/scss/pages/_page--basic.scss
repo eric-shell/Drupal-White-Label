@@ -1,4 +1,5 @@
-@use 'utils' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/colors' as *;
 
 .node--type-page {
   padding: 24px 24px 48px;

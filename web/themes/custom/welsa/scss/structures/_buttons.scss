@@ -1,4 +1,6 @@
-@use 'utils' as *;
+@use 'utils/colors' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/typography' as *;
 
 @mixin cta--primary($primary: $blue-medium, $secondary: $blue-dark) {
   @include font--body;

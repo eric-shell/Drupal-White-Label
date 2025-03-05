@@ -1,6 +1,8 @@
-@use 'utils' as *;
-@use '../structures/buttons' as *;
-@use '../structures/forms' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/colors' as *;
+@use 'utils/typography' as *;
+@use 'structures/buttons' as *;
+@use 'structures/forms' as *;
 
 // Login and password page
 .user-pass,

@@ -1,4 +1,6 @@
-@use 'utils' as *;
+@use 'utils/colors' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/typography' as *;
 
 .block--local-tasks {
   z-index: 100;

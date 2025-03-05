@@ -1,15 +1,17 @@
-// @use './utils' as *;
+@use 'utils/breakpoints' as *;
+@use 'utils/colors' as *;
+@use 'utils/typography' as *;
 
-// .ck-content {
-//   box-sizing: border-box;
+.ck-content {
+  box-sizing: border-box;
 
-//   // Make background off-white to handle white and lighter text
-//   & {
-//     background: #EBEBEB !important;
-//   }
+  // Make background off-white to handle white and lighter text
+  & {
+    background: #EBEBEB !important;
+  }
 
-//   // Add common heading spacing used on blocks/components
-//   @include headings {
-//     padding: 0 0 24px;
-//   }
-// }
+  // Add common heading spacing used on blocks/components
+  @include headings {
+    padding: 0 0 24px;
+  }
+}

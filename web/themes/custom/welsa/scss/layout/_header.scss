@@ -119,14 +119,14 @@ $submenu--width: 250px;
     &--open {
 
       &:before {
-        mask-image: url(../../images/icons/icon__menu.svg);
+        mask-image: url(../../dist/images/icons/icon__menu.svg);
       }
     }
 
     &--close {
 
       &:before {
-        mask-image: url(../../images/icons/icon__close.svg);
+        mask-image: url(../../dist/images/icons/icon__close.svg);
       }
     }
   }
@@ -170,7 +170,7 @@ $submenu--width: 250px;
   }
 
   &__logo {
-    background: url(../../images/branding/logo--dark.svg) center center no-repeat;
+    background: url(../../dist/images/branding/logo--dark.svg) center center no-repeat;
     width: 121px;
     height: 27px;
     overflow: hidden;
@@ -268,7 +268,7 @@ $submenu--width: 250px;
       width: 45px;
       height: 45px;
       background: $blue-dark;
-      mask-image: url(../../images/icons/icon__arrow.svg);
+      mask-image: url(../../dist/images/icons/icon__arrow.svg);
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: 24px 24px;
@@ -446,7 +446,7 @@ $submenu--width: 250px;
             width: 16px;
             height: 16px;
             background: $blue-dark;
-            mask-image: url(../../images/icons/icon__arrow.svg);
+            mask-image: url(../../dist/images/icons/icon__arrow.svg);
             mask-position: center;
             mask-repeat: no-repeat;
             mask-size: 16px 16px;

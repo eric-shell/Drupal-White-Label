@@ -1,11 +1,11 @@
 {
   "name": "welsa",
-  "version": "1.0.0",
-  "description": "Core gulp dependencies",
+  "version": "2.0.0",
+  "description": "Front end build tasks for Welsa",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp",
-    "build": "gulp",
+    "watch": "gulp watch",
+    "build": "gulp build",
     "tasks": "gulp --tasks",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,15 +14,17 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-cache": "^1.1.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.1.0",
     "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
     "gulp-wrap": "^0.15.0",
     "sass": "^1.79.4"
-  },
-  "dependencies": {}
+  }
 }

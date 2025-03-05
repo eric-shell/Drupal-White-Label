@@ -31,7 +31,7 @@
       border-radius: 50%;
       margin-right: 12px;
       background: $white;
-      mask-image: url('../../images/messages/message__success.svg');
+      mask-image: url('../../dist/images/messages/message__success.svg');
       mask-position: center;
       mask-repeat: no-repeat;
     }
@@ -40,7 +40,7 @@
       background: $orange;
 
       &:before {
-        mask-image: url('../../images/messages/message__warning.svg');
+        mask-image: url('../../dist/images/messages/message__warning.svg');
       }
     }
 
@@ -51,7 +51,7 @@
       font-size: 14px;
 
       &:before {
-        mask-image: url('../../images/messages/message__error.svg');
+        mask-image: url('../../dist/images/messages/message__error.svg');
       }
 
       a {

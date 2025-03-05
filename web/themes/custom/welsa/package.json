@@ -4,6 +4,7 @@
   "description": "Front end build tasks for Welsa",
   "main": "index.js",
   "scripts": {
+    "clean": "gulp clean",
     "watch": "gulp watch",
     "build": "gulp build",
     "tasks": "gulp --tasks",
@@ -25,6 +26,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
     "gulp-wrap": "^0.15.0",
+    "rimraf": "^3.0.2",
     "sass": "^1.79.4"
   }
 }

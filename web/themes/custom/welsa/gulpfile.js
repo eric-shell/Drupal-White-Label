@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
 const cache = require('gulp-cache')
+const rimraf = require('rimraf')
 
 // Error handling
 const errorHandler = function(errorTitle) {
@@ -22,6 +23,11 @@ const errorHandler = function(errorTitle) {
     })
   };
 };
+
+// Clean dist directory using rimraf
+function cleanDist(done) {
+  rimraf('./dist', { glob: false }, done);
+}
 
 function processScss(source, outputName) {
   return src(source)
@@ -94,13 +100,14 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const build = parallel(themeImg, themeWysiwyg, themeScss, themeJs);
+const build = series(cleanDist, parallel(themeImg, themeWysiwyg, themeScss, themeJs));
 
 // Export tasks
+exports.clean = cleanDist;
 exports.scss = themeScss;
 exports.js = themeJs;
 exports.images = themeImg;
 exports.clearCache = clearCache;
 exports.build = build;
-exports.watch = watchFiles;
+exports.watch = series(build, watchFiles);
 exports.default = build;

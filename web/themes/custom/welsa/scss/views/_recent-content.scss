@@ -42,31 +42,4 @@
       }
     }
   }
-
-  .dropbutton {
-    @include cta--primary;
-
-    & {
-      min-height: 48px;
-      flex-direction: column;
-    }
-
-    .secondary-action {
-      margin-top: 8px;
-    }
-
-    a {
-      color: $white;
-      text-decoration: none;
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .dropbutton-multiple .dropbutton-widget {
-    padding: 0;
-  }
 }

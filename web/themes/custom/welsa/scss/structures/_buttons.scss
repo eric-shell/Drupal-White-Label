@@ -174,6 +174,27 @@
       .dropbutton-arrow {
         top: auto;
       }
+
+      li {
+
+        a {
+          border-radius: 0;
+        }
+
+        &:first-of-type {
+
+          a {
+            border-radius: 24px 0 0 0;
+          }
+        }
+
+        &:last-of-type {
+
+          a {
+            border-radius: 0 0 0 24px;
+          }
+        }
+      }
     }
   }
 
@@ -201,10 +222,6 @@
     }
   }
 
-  // &-action:not(:first-child) {
-  //   margin-top: 16px;
-  // }
-
   &-arrow {
     position: relative;
     top: auto;
@@ -213,5 +230,10 @@
 
   a {
     @include cta--primary;
+
+    & {
+      border-radius: 24px 0 0 24px;
+      transition: border-radius 0s;
+    }
   }
 }

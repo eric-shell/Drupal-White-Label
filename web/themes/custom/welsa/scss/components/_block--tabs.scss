@@ -30,6 +30,12 @@
     @include headings {
       padding: 0 0 24px;
     }
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: reveal linear both;
+      animation-timeline: view(block);
+      animation-range: cover 0% cover 25%;
+    }
   }
 
   .field-item__field-tabs {

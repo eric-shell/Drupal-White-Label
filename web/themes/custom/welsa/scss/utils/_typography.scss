@@ -7,7 +7,7 @@
   line-height: 1;
 }
 
-@mixin font--secondary($weight: 400) {
+@mixin font--secondary($weight: 500) {
   font-weight: $weight;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 1;
@@ -20,10 +20,9 @@
 }
 
 @mixin font--informal {
-  font-family: 'Knewave', system-ui;
+  font-family: "Permanent Marker", cursive;
   font-weight: 400;
   font-style: normal;
-  text-transform: uppercase;
   transform: rotate(-3deg);
   display: inline-block;
   line-height: 1;

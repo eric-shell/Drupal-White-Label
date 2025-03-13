@@ -47,6 +47,7 @@
     .menu {
 
       a {
+        @include font--body(500);
         display: block;
         color: $white;
         padding: 8px 0;

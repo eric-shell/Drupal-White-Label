@@ -217,7 +217,7 @@ $submenu--width: 250px;
     .menu {
 
       a:not([class*="cta--"]) {
-        @include font--body;
+        @include font--body(500);
         display: flex;
         color: $blue-dark;
         text-decoration: none;
@@ -332,7 +332,7 @@ $submenu--width: 250px;
         }
 
         > a:not([class*="cta--"]) {
-          @include font--body;
+          @include font--body(500);
           padding: 12px 24px;
           text-align: left;
 

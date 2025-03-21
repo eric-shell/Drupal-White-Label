@@ -1,0 +1,24 @@
+name: White Label Application Recipe
+description: 'A comprehensive recipe for setting up a White Label Application with common configurations and features.'
+type: recipe
+dependencies:
+  - drupal:admin_toolbar
+  - drupal:blazy
+  - drupal:config_ignore
+  - drupal:config_update
+  - drupal:entity_reference_revisions
+  - drupal:google_tag
+  - drupal:layout_builder_restrictions
+  - drupal:link_attributes
+  - drupal:metatag
+  - drupal:minifyhtml
+  - drupal:paragraphs
+  - drupal:pathauto
+  - drupal:redirect
+  - drupal:robotstxt
+  - drupal:shield
+  - drupal:simple_sitemap
+  - drupal:svg_formatter
+  - drupal:svg_image
+  - drupal:twig_tweak
+  - drupal:webp

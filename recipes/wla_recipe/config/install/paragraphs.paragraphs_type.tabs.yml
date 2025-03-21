@@ -1,0 +1,10 @@
+uuid: 490341a4-2145-4b68-854e-ff8ec397d1b3
+langcode: en
+status: true
+dependencies: {  }
+id: tabs
+label: Tabs
+icon_uuid: null
+icon_default: null
+description: 'A <b>Tabs</b> paragraph contains label and body fields that display as a tabbed element.'
+behavior_plugins: {  }

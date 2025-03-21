@@ -1,0 +1,10 @@
+uuid: 2af6ab84-8e8c-4a54-8141-833507499e78
+langcode: en
+status: true
+dependencies: {  }
+id: full_content
+label: 'Full Content'
+icon_uuid: null
+icon_default: null
+description: 'A <b>Full Content</b> paragraph contains image, body and link fields that display as a full width, image based hero / slider or stacked list.'
+behavior_plugins: {  }

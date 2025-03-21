@@ -1,0 +1,10 @@
+uuid: e807aa4f-f77e-4a0a-8482-13192534bf1d
+langcode: en
+status: true
+dependencies: {  }
+id: collection
+label: Collection
+icon_uuid: null
+icon_default: null
+description: 'A <b>Collection</b> paragraph contains image, body and link fields that display as a list / grid.'
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+name: drupal-white-label
+type: drupal10
+docroot: web
+php_version: "8.2"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+  type: mariadb
+  version: "10.11"
+use_dns_when_possible: true
+composer_version: "2"
+web_environment: []
+nodejs_version: "18"
+
+# Key features for Drupal
+hooks:
+  post-start:
+    - exec: drush cache:rebuild
+
+# This hooks into drush commands
+omit_containers: [ddev-ssh-agent]
+

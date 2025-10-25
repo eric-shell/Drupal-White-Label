@@ -1,8 +1,0 @@
-uuid: 1b5e9b7a-bfad-4049-af5e-bf469a9201c9
-langcode: en
-status: true
-dependencies: {  }
-id: gutter
-label: Gutter
-description: 'Displays fixed CTAs on mobile devices'
-locked: false

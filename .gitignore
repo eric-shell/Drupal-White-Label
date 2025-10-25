@@ -97,3 +97,4 @@
 
 # Ignore .env files as they are personal
 #/.env
+database.sql.gz
